@@ -1,0 +1,1 @@
+web: gunicorn secret_chef.wsgi
