@@ -7,6 +7,7 @@ from cloudinary.models import CloudinaryField
 # Status on the posts
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 # Build up of post
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -22,15 +23,18 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='recipie_like', blank=True)
+
 # Order of post
     class Meta:
         ordering = ["-created_on"]
+
 # Show number of likes
     def __str__(self):
         return self.title
 
     def number_of_likes(self):
         return self.likes.count()
+
 
 # Build up for comments
 class Comment(models.Model):
