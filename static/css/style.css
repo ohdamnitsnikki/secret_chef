@@ -213,6 +213,10 @@ input{
     justify-content: flex-end!important;
 }
 
+.mt-auto {
+    margin-top: auto!important;
+}
+
 .list-unstyled {
     padding-left: 0;
     list-style: none;
