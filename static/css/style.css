@@ -178,3 +178,42 @@ input{
     margin: 0;
     font-family: inherit;
 }
+
+/*footer and media links*/
+
+.my-4 {
+    margin-top: 1.5rem!important;
+    margin-bottom: 1.5rem!important;
+}
+
+.justify-content-between {
+    justify-content: space-between!important;
+}
+
+.border-top {
+    border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
+}
+
+.text-body-secondary {
+    --bs-text-opacity: 1;
+    color: var(--bs-secondary-color)!important;
+}
+.text-decoration-none {
+    text-decoration: none!important;
+}
+.lh-1 {
+    line-height: 1!important;
+}
+
+.me-2 {
+    margin-right: 0.5rem!important;
+}
+
+.justify-content-end {
+    justify-content: flex-end!important;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
