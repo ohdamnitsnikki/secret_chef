@@ -15,8 +15,8 @@ def about(request):
 
 
 def post_form(request):
-    return render(request, 'post_form.html')
+    return render(request, 'form.html')
 
 
-def login_signup(request):
-    return render(request, 'login/signup.html')
+def login(request):
+    return render(request, 'login_signup.html')
