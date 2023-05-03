@@ -4,34 +4,36 @@
 
 
 <!-- Form -->
+<div class="form">
 <div class="bd-example">
-<form class="was-validated">
-  <div class="mb-3">
-    <label for="validationTextarea">Textarea</label>
-    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
-    <div class="invalid-feedback">
-      Please provide us with description and measurements.
+  <input class="form-control form-control-lg" type="text" placeholder="Name of dish">
+  <form class="was-validated">
+    <div class="mb-3">
+      <label for="validationTextarea"></label>
+      <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Please provide us with a clear description and measurements of your recipe." required></textarea>
+      <div class="invalid-feedback">
+      </div>
     </div>
-  </div>
 
 
-  <div class="form-group">
-    <select class="custom-select" required>
-      <option value="">Choose category</option>
-      <option value="1">Breakfast</option>
-      <option value="2">Dinner</option>
-      <option value="3">Dessert</option>
-    </select>
-    <div class="invalid-feedback">Example invalid custom select feedback</div>
-  </div>
+    <div class="form-group">
+      <select class="custom-select" required>
+        <option value="">Choose category</option>
+        <option value="1">Breakfast</option>
+        <option value="2">Dinner</option>
+        <option value="3">Dessert</option>
+      </select>
+      <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
 
-  <div class="custom-file">
-    <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-    <div class="invalid-feedback">Example invalid custom file feedback</div>
-  </div>
-  <button class="btn btn-primary" type="submit">Submit recipie</button>
-</form>
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+      <label class="custom-file-label" for="validatedCustomFile">Upload photo of your dish!</label>
+      <div class="invalid-feedback">Example invalid custom file feedback</div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit recipe</button>
+  </form>
+</div>
 </div>
 
 {%endblock%}
