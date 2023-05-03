@@ -222,6 +222,14 @@ input{
     list-style: none;
 }
 
+.ms-3 {
+    margin-left: 1rem!important;
+}
+
+.social-links {
+    padding-left: 10px;
+}
+
 /* Form and inputs */
 
 @media (min-width: 576px){

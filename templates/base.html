@@ -23,19 +23,20 @@
         <ul class="nav me-auto">
 
           <li class="nav-item">
-            <a href="#" class="nav-link link-dark px-2 active" aria-current="page">Home</a>
+            <a href="{% url 'home' %}" class="nav-link link-dark px-2 active" aria-current="page">Home</a>
           </li>
 
           <li class="nav-item">
             <a href="#" class="nav-link link-dark px-2 active" aria-current="page">About</a>
           </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link link-dark px-2 active" aria-current="page">Post</a>
-          </li>
         </ul>
 
         <ul class="nav">
+
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark px-2 active" aria-current="page">Post</a>
+          </li>
 
           <li class="nav-item">
             <a href="#" class="nav-link link-dark px-2 active" aria-current="page">Login/Sign up</a>
@@ -85,7 +86,7 @@
 
   <ul class="nav col-md-4 justify-content-end list.unstyled d-flex">
 
-    <li class="ms-3">
+    <li class="ms-3 social-media">
       <a href="#" class="text-body-secondary"></a>
     </li>
 
@@ -96,13 +97,29 @@
     <li class="ms-3">
       <a href="#" class="text-body-secondary"></a>
     </li>
-
   </ul>
+
+  <ul class="social-media">
+    <li class="ms-3 social-links">
+        <a href="https://facebook.com" target="_blank" rel="noopener"
+            aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a>
+    </li>
+    
+    <li class="social-links">
+        <a href="https://instagram.com" target="_blank" rel="noopener"
+            aria-label="Visit our Instagram page (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a>
+    </li>
+    <li class="social-links"><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener"><i class="fa-regular fa-paper-plane"></i>Want to share your best tips? Write me an email!</a></li>
+</ul>
 
       
     </footer>
 </div>
 
-    <script src="https://kit.fontawesome.com/f90f0f7add.js" crossorigin="anonymous"></script>
-   </body> 
+<!--font awesome script-->
+
+<script src="https://kit.fontawesome.com/f90f0f7add.js" crossorigin="anonymous"></script>
+
+  </body> 
+
 </html>
