@@ -21,3 +21,4 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path("", include("recipies.urls"), name="recipies-urls"),
 ]
+
