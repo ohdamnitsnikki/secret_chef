@@ -315,3 +315,10 @@ button, input, optgroup, select, textarea {
     margin: 0;
     font-family: inherit;
 }
+
+/* main blogposts */
+
+.main-bg {
+    background-color: #F9FAFC;
+}
+
