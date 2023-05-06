@@ -31,6 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['secret-chef1337.herokuapp.com', 'localhost']
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Application definition
 
