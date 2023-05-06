@@ -39,13 +39,27 @@
 
         <ul class="nav">
 
+          {% if user.is_authenticated %}
+
           <li class="nav-item">
             <a href="{% url 'post_form' %}" class="nav-link link-dark px-2 active" aria-current="page">Post</a>
           </li>
 
           <li class="nav-item">
-            <a href="{% url 'login' %}" class="nav-link link-dark px-2 active" aria-current="page">Login/Sign up</a>
+            <a href="{% url 'account_logout' %}" class="nav-link link-dark px-2 active" aria-current="page">Logout</a>
           </li>
+
+          {% else %}
+
+          <li class="nav-item">
+            <a href="{% url 'account_signup' %}" class="nav-link link-dark px-2 active" aria-current="page">Register</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{% url 'account_login' %}" class="nav-link link-dark px-2 active" aria-current="page">Login</a>
+          </li>
+
+          {% endif %}
 
           
 
@@ -64,10 +78,6 @@
       
           <span class="fs-4">Secret Chef</span>
         </a>
-
-        <form class="col-12 col-lg-auto mb-lg-0" role="search">
-          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-        </form>
 
       </div>
 
