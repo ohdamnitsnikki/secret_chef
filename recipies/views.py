@@ -44,7 +44,7 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-    
+
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
@@ -66,7 +66,7 @@ class PostDetail(View):
 
         return render(
             request,
-            "post_detail.html",
+            "post_view.html",
             {
                 "post": post,
                 "comments": comments,
