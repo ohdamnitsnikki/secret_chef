@@ -36,4 +36,12 @@
 </div>
 </div>
 
+
+<h1>Submit Recipe</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit Recipe</button>
+  </form>
+
 {%endblock%}

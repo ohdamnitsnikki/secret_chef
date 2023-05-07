@@ -51,3 +51,14 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+# Build up for user posts
+class Recipe(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    category = models.CharField(max_length=20)
+    photo = models.ImageField(upload_to='recipes')
+
+    def __str__(self):
+        return self.name

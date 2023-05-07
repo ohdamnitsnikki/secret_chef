@@ -97,8 +97,13 @@ def submit_recipe(request):
         description = request.POST.get('description')
         category = request.POST.get('category')
         photo = request.FILES.get('photo')
-        recipe = Recipe(name=name, description=description, category=category, photo=photo)
+        recipe = Recipe(
+            name=name,
+            description=description,
+            category=category,
+            photo=photo
+        )
         recipe.save()
         return redirect('admin:index')
     else:
-        return render(request, 'submit_recipe.html')
+        return render(request, 'form.html')
