@@ -17,6 +17,21 @@ body {
 
 /*header*/
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .fs-4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
 .py-3 {
     padding-top: 1rem!important;
     padding-bottom: 1rem!important;
@@ -45,10 +60,6 @@ header {
 .link-body-emphasis {
     color: RGBA(var(--bs-emphasis-color-rgb),var(--bs-link-opacity,1));
 
-}
-
-.fs-4 {
-    font-size: calc(1.275rem + .3vw)!important;
 }
 
 .link-body-emphasis {
