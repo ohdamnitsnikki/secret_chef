@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
+from .models import Recipe
 
 
 class PostList(generic.ListView):
@@ -88,3 +89,16 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+def submit_recipe(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        description = request.POST.get('description')
+        category = request.POST.get('category')
+        photo = request.FILES.get('photo')
+        recipe = Recipe(name=name, description=description, category=category, photo=photo)
+        recipe.save()
+        return redirect('admin:index')
+    else:
+        return render(request, 'submit_recipe.html')
