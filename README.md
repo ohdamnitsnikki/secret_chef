@@ -1,108 +1,183 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Secret Chef!
 
-Welcome ohdamnitsnikki,
+Secret Chef is a website for sharing recipes with other secret chefs at home. The site targets everyone who likes to impress their guests with good food and would like to improve their cooking and baking skills.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## CONTENTS
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+* [How does Secret Chef work?](#what-does-the-app-do)
 
-## Gitpod Reminders
+* [Styling that are consistent on the app](#consistent-styling)
+  * [Headings](#headings)
+  * [Links](#links)
+  * [Inserting Images](#inserting-images)
+  * [Italic, Bold & Code](#italic-bold-and-code)
+  * [Strikethrough & Bullet Points](#strikethrough--bullet-points)
+  * [Code Blocks](#code-blocks)
+  * [Tables](#tables)
+* [Nice Extras & Other Interesting Tools](#nice-extras--other-interesting-tools)
+* [Further Reading](#further-reading)
+* [Credits](#credits)
+  * [Media](#media)
+  * [Acknowledgments](#acknowledgments)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+  ## What does the app do?
+* As a user just visiting the page you are able to read other users blog posts and comments and also view the amount of likes a post have. But as a logged in user you are able to:
+   * Use a form to send your own recipes for aproval to the admin.
+   * Comment on the posts and by that being able to conversate with other users.
+   * Like and unlike posts.
 
-`python3 -m http.server`
+## consistent styling 
 
-A blue button should appear to click: _Make Public_,
+### Navigation Bar
 
-Another blue button should appear to click: _Open Browser_.
+* The navigation bar includes responsive links to the home, about, post and login, logout and register page. 
+<img
+  src="assets/images/navigation-bar.PNG"
+  alt="The Navbar" 
+  title="The Navbar"
+  style="display: block; margin: 0 auto; max-width: 500px">
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+<img
+  src="assets/images/index-desktop.PNG"
+  alt="Index desktop" 
+  title="Index desktop"
+  style="display: block; margin: 0 auto; max-width: 600px">
 
-A blue button should appear to click: _Make Public_,
+## Features
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+**Element is constant on each page for easy navigation.** 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### The landing image
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* The first image shown is a forest with a moving train on it to show the user directly that it's a site regarding kids. 
+* After a few seconds there will be a pop-up window with text, this is to make the user feel encouraged and to secure the parent/parents that whatever they might feel about their new life is normal.  
+<img
+  src="assets/images/landing-img.PNG"
+  alt="The Banner photo with Cover Text" 
+  title="The Banner photo with Cover Text"
+  style="display: block; margin: 0 auto; max-width: 500px">
 
-------
+**Element is constant on each page for easy navigation.**
 
-## Release History
+### Header- First three months with a newborn
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* The header informs that the information on this site mainly targets the first three months with the baby. 
+<img
+  src="assets/images/header.PNG"
+  alt="The Header" 
+  title="The Header"
+  style="display: block; margin: 0 auto; max-width: 300px">
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+**Element is constant on each page for easy navigation.**
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### The Pictures
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+* The pictures of four babies are added for recognition.
+<img
+  src="assets/images/four-babies.PNG"
+  alt="Index photos" 
+  title="Index photos"
+  style="display: block; margin: 0 auto; max-width: 500px">
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### The Footer
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+* The Footer has navigation links that opens in a new window when used. One to our Facebook page, one for Instagram and one to our Email if you would like to send in a tip, which is also put next to the email icon.
+<img
+  src="assets/images/footer.PNG"
+  alt="The Footer" 
+  title="The Footer"
+  style="display: block; margin: 0 auto; max-width: 500px">
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+**Element is constant on each page for easy navigation.**
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Baby Care
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* Baby care provides three informational cards. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+1. First one is about what clothes to preferably buy. 
+2. Second one is how to easier cope and save energy. 
+3. Third one is regarding babies health.
+<img
+  src="assets/images/baby-care.PNG"
+  alt="Baby Care information cards" 
+  title="Baby Care information cards"
+  style="display: block; margin: 0 auto; max-width: 500px">
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Must Haves
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+* Must haves has four informational cards with a heading named after the item(s) you should buy, and linked pictures of the item(s) and when clicked the picture opens up a new window showing where you can buy it and a text section telling the user what it’s good for.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+<img
+  src="assets/images/must-haves.PNG"
+  alt="Must haves information cards" 
+  title="Must Haves information cards"
+  style="display: block; margin: 0 auto; max-width: 350x">
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Tips and Tricks 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+* Tips and Tricks contains four cards regarding tips that doesn’t go under the subject baby care or must haves. 
+* Each one have a photo matching the tip.
 
-------
+<img 
+src="assets/images/tips-and-tricks.PNG" 
+alt="Tips and Tricks information cards" 
+title="Tips and Tricks information cards"
+style="display: block; margin: 0 auto; max-width: 350px">
 
-## FAQ about the uptime script
+### Subscribe
 
-**Why have you added this script?**
+* The subscribe page has a form to get updates on users email when new tips are added. To receive an email the user must enter their first name, email address and enter if they are a parent, pregnant or both.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<img 
+src="assets/images/subscribe-form.PNG" 
+alt="Subsribe form" 
+title="Subsribe form"
+style="display: block; margin: 0 auto; max-width: 350px">
 
-**How will this affect me?**
+## Features Left to Implement
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+1. On home page I would prefer it to be moving pictures of kids, like gifs or shorter movies. Maybe an audio of some baby laughter.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+2. There should be pictures or videos to all cards with shown content on how to do the specific tip. For example on tips and tricks there is one card telling you to button the body over the babies shoulder to make them stay still. It would be more informative with a video showing the tip. Or on the card that mentions white noises it could be a playlist to use.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+3. On the banner image for desktop, the train could be pulling the cover text on screen instead of having it pop when the train have passed.
 
-**So….?**
+## Testing
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+1. My page with its animations and cards appear good on desktop (1201px and up) and also on smaller screens (1200px and below). 
 
-**Can I opt out?**
+2. Page works good on chrome, firefox, iphone and android. On explorer the pictures in the index file has another width and also the train isn't appearing.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+3. All links are tested in each try of diffrent browsers and all opens in a new window.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Validator Testing
 
-**Anything more?**
+Url for new parent is tested in both [W3C-validator](https://validator.w3.org/) and [W3C-CSS-validaor](http://jigsaw.w3.org/css-validator/validator?lang=sv&profile=css3svg&uri=https%3A%2F%2Fohdamnitsnikki.github.io%2Fnew-parent%2F&usermedium=all&vextwarning=&warning=1)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Deployment 
 
----
+**_New Parent_** is deployed to GitHub pages, this was the steps:
+* Through the GitHub repository go to settings
+* Click on pages and use the branch menu to choose "main"
+* Refresh the page and a link to the final project will be deployed
 
-Happy coding!
+Live link here - [New Parent](https://ohdamnitsnikki.github.io/new-parent/)
+
+* On the main site there is a fork button to create your own repository without affecting the orginal project or you could go into the project file and use the code button and clone the project directly.
+
+## Credits
+
+1. The template is taken from [Code Institute](https://github.com/Code-Institute-Org/gitpod-full-template)
+2. For help during these projects I've used my mentor and the tutors.
+3. To get inspired about box-shadows and subsribe button I've used [W3School](https://www.w3schools.com/)
+4. The Cover-text and form section was inspired by the [Love Running project](https://code-institute-org.github.io/love-running-2.0/index.html)
+5. To understand how to style img in readme file I've used code from [SeanCDavid](https://www.seancdavis.com/posts/three-ways-to-add-image-to-github-readme/)
+
+### Media
+
+* All index photos are taken from [Unsplash](https://unsplash.com/) 
+* The forest in the banner is taken from [DreamStime](https://thumbs.dreamstime.com/b/cartoon-forest-landscape-stones-hand-draw-illustration-135774982.jpg)
+* The train is taken from [ClipartKey](https://www.clipartkey.com/search/toy-train/)
+* The Icons are taken from [Font awesome](https://fontawesome.com/icons)
