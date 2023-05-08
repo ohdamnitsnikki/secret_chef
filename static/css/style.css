@@ -17,20 +17,15 @@ body {
 
 /*header*/
 
-.center {
+header {
+    background-color: #fff0f07a;
+    border-bottom: 2px solid #e1e1e1;
+    height: 80px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100%;
-  }
-  
-  .fs-4 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    padding: 1rem;
-    border-radius: 0.5rem;
-  }
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 /*footer and media links*/
 
@@ -150,6 +145,7 @@ button, input, optgroup, select, textarea {
 
 .card-body {
     box-shadow: 0px 0px 8px 1px #888888d9;
+    background-color: #fff0f07a;
 
 }
 .brand {
@@ -172,7 +168,7 @@ button, input, optgroup, select, textarea {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #ae875d57;
 }
 
 .main-bg {
@@ -212,7 +208,7 @@ button, input, optgroup, select, textarea {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color:#ae875d57;
     color: white;
     position: relative;
 }
@@ -229,7 +225,7 @@ button, input, optgroup, select, textarea {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: #e1d4c5;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -238,7 +234,7 @@ button, input, optgroup, select, textarea {
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: #ae875d57;
 }
 
 .post-link:hover,
@@ -253,7 +249,7 @@ button, input, optgroup, select, textarea {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: #6f6060;
 }
 
 .btn-signup {
@@ -274,7 +270,7 @@ button, input, optgroup, select, textarea {
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #ae875d57;
     text-decoration: underline;
 }
 
