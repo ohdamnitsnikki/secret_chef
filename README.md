@@ -26,10 +26,9 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
    * Comment on the posts and by that being able to conversate with other users.
    * Like and unlike posts.
 
-## consistent styling 
+## Consistent styling 
 
 ### Navigation Bar
-
 * The navigation bar includes responsive links to the home, about, post and login, logout and register page. 
 <img
   src="assets/images/navigation-bar.png"
@@ -38,7 +37,6 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
   style="display: block; margin: 0 auto; max-width: 500px">
   
 ### Header- Seret Chef!
-
 * The header containes the applications name 
 <img
   src="assets/images/header.png"
@@ -46,31 +44,37 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
   title="The Header"
   style="display: block; margin: 0 auto; max-width: 300px">
 
-**These elements are constant on each page for easy navigation.**
-
-
-## Features
 
 ### The Footer
-
-* The Footer has navigation links that opens in a new window when used. One to our Facebook page, one for Instagram and one to our Email if you would like to send in a tip, which is also put next to the email icon.
+* The Footer has navigation links that opens in a new window when used. One to our Facebook page, one for Instagram and one to our youtube chanel. 
 <img
   src="assets/images/footer.PNG"
   alt="The Footer" 
   title="The Footer"
   style="display: block; margin: 0 auto; max-width: 500px">
 
-**Element is constant on each page for easy navigation.**
+**These elements are constant on each page for easy navigation.**
 
-### Baby Care
+### Home Page 
 
-* Baby care provides three informational cards. 
+* The home page is where you can see the blogposts thats been posted, the author of the post, what time and date it was and how many likes the post has.
 
-1. First one is about what clothes to preferably buy. 
-2. Second one is how to easier cope and save energy. 
-3. Third one is regarding babies health.
 <img
-  src="assets/images/baby-care.PNG"
+  src="assets/images/home.png"
+  alt="Baby Care information cards" 
+  title="Baby Care information cards"
+  style="display: block; margin: 0 auto; max-width: 500px">
+
+1. By pressing the title of the post in this case "Scones you'll enter that specific post".
+2. From here you can read the description of the recipe. 
+3. You can also read the comments and comment if your a user.
+<img
+  src="assets/images/description.png"
+  alt="Baby Care information cards" 
+  title="Baby Care information cards"
+  style="display: block; margin: 0 auto; max-width: 500px">
+  <img
+  src="assets/images/comment.png"
   alt="Baby Care information cards" 
   title="Baby Care information cards"
   style="display: block; margin: 0 auto; max-width: 500px">
@@ -105,6 +109,9 @@ src="assets/images/subscribe-form.PNG"
 alt="Subsribe form" 
 title="Subsribe form"
 style="display: block; margin: 0 auto; max-width: 350px">
+
+## Features
+
 
 ## Features Left to Implement
 
