@@ -79,35 +79,37 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
   title="Baby Care information cards"
   style="display: block; margin: 0 auto; max-width: 500px">
 
-### Must Haves
+### About
 
-* Must haves has four informational cards with a heading named after the item(s) you should buy, and linked pictures of the item(s) and when clicked the picture opens up a new window showing where you can buy it and a text section telling the user what it’s good for.
+* The about page contains a short description of the reason of this app.
 
 <img
-  src="assets/images/must-haves.PNG"
+  src="assets/images/about.png"
   alt="Must haves information cards" 
   title="Must Haves information cards"
   style="display: block; margin: 0 auto; max-width: 350x">
 
-### Tips and Tricks 
+### Register 
 
-* Tips and Tricks contains four cards regarding tips that doesn’t go under the subject baby care or must haves. 
-* Each one have a photo matching the tip.
+* If your new to the page you will see register and login in the navbar. 
+* If your already logged-in you will se signout.
 
 <img 
-src="assets/images/tips-and-tricks.PNG" 
+src="assets/images/sign_up.png" 
 alt="Tips and Tricks information cards" 
 title="Tips and Tricks information cards"
 style="display: block; margin: 0 auto; max-width: 350px">
 
-### Subscribe
-
-* The subscribe page has a form to get updates on users email when new tips are added. To receive an email the user must enter their first name, email address and enter if they are a parent, pregnant or both.
+<img 
+src="assets/images/sign_in.png" 
+alt="Tips and Tricks information cards" 
+title="Tips and Tricks information cards"
+style="display: block; margin: 0 auto; max-width: 350px">
 
 <img 
-src="assets/images/subscribe-form.PNG" 
-alt="Subsribe form" 
-title="Subsribe form"
+src="assets/images/sign_out.png" 
+alt="Tips and Tricks information cards" 
+title="Tips and Tricks information cards"
 style="display: block; margin: 0 auto; max-width: 350px">
 
 ## Features
@@ -147,14 +149,13 @@ Live link here - [New Parent](https://ohdamnitsnikki.github.io/new-parent/)
 ## Credits
 
 1. The template is taken from [Code Institute](https://github.com/Code-Institute-Org/gitpod-full-template)
-2. For help during these projects I've used my mentor and the tutors.
-3. To get inspired about box-shadows and subsribe button I've used [W3School](https://www.w3schools.com/)
-4. The Cover-text and form section was inspired by the [Love Running project](https://code-institute-org.github.io/love-running-2.0/index.html)
+2. For help during these projects I've used my mentor, the tutors and the I think therfore I blog walkthrough project.
+3. The form for registration, sign in and sign out is completely built with djangos premade forms. Also the blog posts html code is from the walkthrough project. I've just added in some colours to make it fit my page since the content already looked so good. That also goes for the comment content and comment form. 
+4. To get inspired about box-shadows and subsribe button I've used [W3School](https://www.w3schools.com/)
 5. To understand how to style img in readme file I've used code from [SeanCDavid](https://www.seancdavis.com/posts/three-ways-to-add-image-to-github-readme/)
 
 ### Media
 
-* All index photos are taken from [Unsplash](https://unsplash.com/) 
-* The forest in the banner is taken from [DreamStime](https://thumbs.dreamstime.com/b/cartoon-forest-landscape-stones-hand-draw-illustration-135774982.jpg)
-* The train is taken from [ClipartKey](https://www.clipartkey.com/search/toy-train/)
-* The Icons are taken from [Font awesome](https://fontawesome.com/icons)
+*  
+* 
+* 
