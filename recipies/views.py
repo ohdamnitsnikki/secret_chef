@@ -94,17 +94,20 @@ class PostLike(View):
 
 def submit_recipe(request):
     if request.method == 'POST':
-        name = request.POST.get('name')
-        description = request.POST.get('description')
-        category = request.POST.get('category')
-        photo = request.FILES.get('photo')
-        recipe = Recipe(
-            name=name,
-            description=description,
-            category=category,
-            photo=photo
-        )
-        recipe.save()
-        return redirect('admin:index')
+        form = RecipeForm(request.POST, request.FILES)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            description = form.cleaned_data['description']
+            category = form.cleaned_data['category']
+            photo = form.cleaned_data['photo']
+            recipe = Recipe(
+                name=name,
+                description=description,
+                category=category,
+                photo=photo
+            )
+            recipe.save()
+            return redirect(reverse('admin:index'))
     else:
-        return render(request, 'form.html')
+        form | crispy 
+    return render(request, 'form.html', {'form': form})

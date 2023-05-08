@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
@@ -7,18 +8,19 @@
 <div class="form">
 <div class="bd-example">
   
-  <form class="was-validated">
-    <input class="form-control form-control-lg" type="text" placeholder="Name of dish">
+  <form class="was-validated" method="POST" enctype="multipart/form-data"> 
+    {% csrf_token %}
     <div class="mb-3">
+      <input class="form-control form-control-lg" name="name" id="id_name" type="text" placeholder="Name of dish">
       <label for="validationTextarea"></label>
-      <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Please provide us with a clear description and measurements of your recipe." required></textarea>
+      <textarea class="form-control is-invalid" id="id_description" name="description" placeholder="Please provide us with a clear description and measurements of your recipe." required></textarea>
       <div class="invalid-feedback">
       </div>
     </div>
 
 
     <div class="form-group">
-      <select class="custom-select" required>
+      <select id="id_category" name="category" class="custom-select" required>
         <option value="">Choose category</option>
         <option value="1">Breakfast</option>
         <option value="2">Dinner</option>
@@ -28,7 +30,7 @@
     </div>
 
     <div class="custom-file">
-      <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+      <input name="photo" id="id_photo" type="file" class="custom-file-input" id="validatedCustomFile" required>
       <label class="custom-file-label" for="validatedCustomFile">Upload photo of your dish!</label>
       <div class="invalid-feedback">Example invalid custom file feedback</div>
     </div>
@@ -37,37 +39,18 @@
 </div>
 </div>
 
-<form method="post" enctype="multipart/form-data" class="was-validated">
-  {% csrf_token %}
-  <div class="form-group">
-      <label for="id_name">Name of dish:</label>
-      {{ form.name }}
+
+<div class="form">
+  <div class="bd-example">
+    
+    <form class="was-validated" method="POST" enctype="multipart/form-data"> 
+      {% csrf_token %}
+      {{ form | crispy }}
+      
+    </form>
   </div>
-  <div class="form-group">
-      <label for="id_description">Description and Measurements:</label>
-      {{ form.description }}
-      <div class="invalid-feedback">
-          Please provide a clear description and measurements of your recipe.
-      </div>
   </div>
-  <div class="form-group">
-      <label for="id_photo">Photo:</label>
-      {{ form.photo }}
-      <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-      <label class="custom-file-label" for="validatedCustomFile">Upload photo of your dish!</label>
-      <div class="invalid-feedback">Please provide a photo of your dish.</div>
-  </div>
-  <div class="form-group">
-      <label for="id_category">Category:</label>
-      <select class="custom-select" name="category" required>
-        <option value="">Choose category</option>
-        <option value="1">Breakfast</option>
-        <option value="2">Dinner</option>
-        <option value="3">Dessert</option>
-      </select>
-      <div class="invalid-feedback">Please choose a category for your recipe.</div>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit recipe</button>
-</form>
+
+
 
 {%endblock%}
