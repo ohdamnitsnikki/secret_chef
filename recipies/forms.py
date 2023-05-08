@@ -9,7 +9,7 @@ class CommentForm(forms.ModelForm):
         fields = ('body',)
 
 
-class RecipeForm(forms.Form):
+class RecipeForm(forms.ModelForm):
     name = forms.CharField(
         max_length=100,
         widget=forms.TextInput(attrs={'class': 'form-control form-control-lg', 'placeholder': 'Name of dish'}),
@@ -32,3 +32,7 @@ class RecipeForm(forms.Form):
         widget=forms.FileInput(attrs={'class': 'custom-file-input', 'id': 'validatedCustomFile', 'required': True}),
         error_messages={'required': 'Please upload a photo of your dish.'},
     )
+
+    class Meta:
+        model = Recipe
+        fields = ('name', 'description', 'category', 'photo',)

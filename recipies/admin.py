@@ -33,3 +33,7 @@ class RecipeAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'category', 'photo')
     list_filter = ('category',)
     search_fields = ('name', 'description')
+    actions = ['approve_recipe']
+
+    def approve_recipe(self, request, queryset):
+        queryset.update(approved=True)

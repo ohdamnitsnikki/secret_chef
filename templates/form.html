@@ -10,6 +10,7 @@
   
   <form class="was-validated" method="POST" enctype="multipart/form-data"> 
     {% csrf_token %}
+   
     <div class="mb-3">
       <input class="form-control form-control-lg" name="name" id="id_name" type="text" placeholder="Name of dish">
       <label for="validationTextarea"></label>
@@ -36,20 +37,10 @@
     </div>
     <button class="btn btn-primary" type="submit">Submit recipe</button>
   </form>
-</div>
-</div>
 
-
-<div class="form">
-  <div class="bd-example">
-    
-    <form class="was-validated" method="POST" enctype="multipart/form-data"> 
-      {% csrf_token %}
-      {{ form | crispy }}
-      
-    </form>
   </div>
   </div>
+
 
 
 

@@ -109,5 +109,5 @@ def submit_recipe(request):
             recipe.save()
             return redirect(reverse('admin:index'))
     else:
-        form | crispy 
+        form = RecipeForm()
     return render(request, 'form.html', {'form': form})
