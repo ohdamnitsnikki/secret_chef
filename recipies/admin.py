@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
+from .models import Recipe
 
 
 # Display of admin posts
@@ -24,3 +25,11 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
+
+
+# Display user posts
+@admin.register(Recipe)
+class RecipeAdmin(admin.ModelAdmin):
+    list_display = ('name', 'description', 'category', 'photo')
+    list_filter = ('category',)
+    search_fields = ('name', 'description')
