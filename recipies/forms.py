@@ -12,7 +12,12 @@ class CommentForm(forms.ModelForm):
 class RecipeForm(forms.ModelForm):
     name = forms.CharField(
         max_length=100,
-        widget=forms.TextInput(attrs={'class': 'form-control form-control-lg', 'placeholder': 'Name of dish'}),
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control form-control-lg',
+                'placeholder': 'Name of dish'
+            }
+        )
     )
     description = forms.CharField(
         widget=forms.Textarea(attrs={'class': 'form-control is-invalid', 'placeholder': 'Please provide us with a clear description and measurements of your recipe.', 'required': True}),
@@ -29,8 +34,12 @@ class RecipeForm(forms.ModelForm):
         error_messages={'required': 'Please choose a category for your recipe.'},
     )
     photo = forms.ImageField(
-        widget=forms.FileInput(attrs={'class': 'custom-file-input', 'id': 'validatedCustomFile', 'required': True}),
-        error_messages={'required': 'Please upload a photo of your dish.'},
+        widget=forms.FileInput(attrs={
+            'class': 'custom-file-input',
+            'id': 'validatedCustomFile',
+            'required': True
+        }),
+        error_messages={'required': 'Please upload a photo of your dish.'}
     )
 
     class Meta:

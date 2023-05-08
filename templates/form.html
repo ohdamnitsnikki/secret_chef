@@ -8,25 +8,40 @@
 <div class="form">
 <div class="bd-example">
   
-  <!-- Form -->
-<div class="form">
-  <div class="bd-example">
+  <form class="was-validated" method="POST" enctype="multipart/form-data"> 
+    {% csrf_token %}
+   
+    <div class="mb-3">
+      <input class="form-control form-control-lg" name="name" id="id_name" type="text" placeholder="Name of dish">
+      <label for="validationTextarea"></label>
+      <textarea class="form-control is-invalid" id="id_description" name="description" placeholder="Please provide us with a clear description and measurements of your recipe." required></textarea>
+      <div class="invalid-feedback">
+      </div>
+    </div>
 
-    <form class="was-validated" method="POST" enctype="multipart/form-data">
-      {% csrf_token %}
 
-      {{ form.name|as_crispy_field }}
-      
-      {{ form.description|as_crispy_field }}
+    <div class="form-group">
+      <select id="id_category" name="category" class="custom-select" required>
+        <option value="">Choose category</option>
+        <option value="1">Breakfast</option>
+        <option value="2">Dinner</option>
+        <option value="3">Dessert</option>
+      </select>
+      <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
 
-      {{ form.category|as_crispy_field }}
-
-      {{ form.photo|as_crispy_field }}
-      
-      <button class="btn btn-primary" type="submit">Submit recipe</button>
-    </form>
+    <div class="custom-file">
+      <input name="photo" id="id_photo" type="file" class="custom-file-input" id="validatedCustomFile" required>
+      <label class="custom-file-label" for="validatedCustomFile">Upload photo of your dish!</label>
+      <div class="invalid-feedback">Example invalid custom file feedback</div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit recipe</button>
+  </form>
 
   </div>
-</div>
+  </div>
+
+
+
 
 {%endblock%}

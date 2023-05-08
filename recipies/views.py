@@ -106,8 +106,10 @@ def submit_recipe(request):
                 category=category,
                 photo=photo
             )
+            print('saving form')
             recipe.save()
             return redirect(reverse('admin:index'))
     else:
+        print('not saving form')
         form = RecipeForm()
     return render(request, 'form.html', {'form': form})
