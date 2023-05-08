@@ -9,5 +9,5 @@ urlpatterns = [
     path("login/", views.login, name="login"),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('like/<slug:slug>/', views.PostLike.as_view(), name="post_like"),
-    path('submit-recipe/', submit_recipe, name='submit_recipe'),  
+    path('submit-recipe/', submit_recipe, name='submit_recipe'),
 ]
