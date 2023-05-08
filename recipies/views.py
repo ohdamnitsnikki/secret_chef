@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+from django.urls import reverse
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
@@ -106,10 +107,8 @@ def submit_recipe(request):
                 category=category,
                 photo=photo
             )
-            print('saving form')
             recipe.save()
             return redirect(reverse('admin:index'))
     else:
-        print('not saving form')
         form = RecipeForm()
     return render(request, 'form.html', {'form': form})

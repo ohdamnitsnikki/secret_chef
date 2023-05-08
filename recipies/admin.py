@@ -30,9 +30,9 @@ class CommentAdmin(admin.ModelAdmin):
 # Display user posts
 @admin.register(Recipe)
 class RecipeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'category', 'photo')
+    list_display = ('title', 'description', 'category', 'photo')
     list_filter = ('category',)
-    search_fields = ('name', 'description')
+    search_fields = ('title', 'description')
     actions = ['approve_recipe']
 
     def approve_recipe(self, request, queryset):
