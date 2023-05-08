@@ -22,7 +22,7 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
 
   ## What does the app do?
 * As a user just visiting the page you are able to read other users blog posts and comments and also view the amount of likes a post have. But as a logged in user you are able to:
-   * Use a form to send your own recipes for aproval to the admin.
+   * Use a form to send your own recipes for approval to the admin.
    * Comment on the posts and by that being able to conversate with other users.
    * Like and unlike posts.
 
@@ -32,54 +32,24 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
 
 * The navigation bar includes responsive links to the home, about, post and login, logout and register page. 
 <img
-  src="assets/images/navigation-bar.PNG"
+  src="assets/images/navigation-bar.png"
   alt="The Navbar" 
   title="The Navbar"
   style="display: block; margin: 0 auto; max-width: 500px">
+  
+### Header- Seret Chef!
 
+* The header containes the applications name 
 <img
-  src="assets/images/index-desktop.PNG"
-  alt="Index desktop" 
-  title="Index desktop"
-  style="display: block; margin: 0 auto; max-width: 600px">
-
-## Features
-
-
-
-**Element is constant on each page for easy navigation.** 
-
-### The landing image
-
-* The first image shown is a forest with a moving train on it to show the user directly that it's a site regarding kids. 
-* After a few seconds there will be a pop-up window with text, this is to make the user feel encouraged and to secure the parent/parents that whatever they might feel about their new life is normal.  
-<img
-  src="assets/images/landing-img.PNG"
-  alt="The Banner photo with Cover Text" 
-  title="The Banner photo with Cover Text"
-  style="display: block; margin: 0 auto; max-width: 500px">
-
-**Element is constant on each page for easy navigation.**
-
-### Header- First three months with a newborn
-
-* The header informs that the information on this site mainly targets the first three months with the baby. 
-<img
-  src="assets/images/header.PNG"
+  src="assets/images/header.png"
   alt="The Header" 
   title="The Header"
   style="display: block; margin: 0 auto; max-width: 300px">
 
-**Element is constant on each page for easy navigation.**
+**These elements are constant on each page for easy navigation.**
 
-### The Pictures
 
-* The pictures of four babies are added for recognition.
-<img
-  src="assets/images/four-babies.PNG"
-  alt="Index photos" 
-  title="Index photos"
-  style="display: block; margin: 0 auto; max-width: 500px">
+## Features
 
 ### The Footer
 

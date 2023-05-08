@@ -13,6 +13,8 @@ body {
     color: #212529;
     text-align: left;
     background-color: #fff;
+    height: 100%;
+    margin-bottom: 100px;
 }
 
 /*header*/
@@ -30,12 +32,12 @@ header {
 /*footer and media links*/
 
 footer {
-    height: 75px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
     background-color: #f8f9fa;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
 }
 
 footer>ul {
