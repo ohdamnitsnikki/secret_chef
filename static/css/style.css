@@ -174,7 +174,8 @@ button, input, optgroup, select, textarea {
 
 .main-bg {
     background-color: #F9FAFC;
-    margin-top: 16px;
+    min-height: 460px;
+    border-top: 2px solid #e1e1e1;
 }
 
 .card {
