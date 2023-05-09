@@ -123,6 +123,7 @@ With Djangos build in batteries included as they say in the walkthrough project 
 * A lot of the styling is styled with help of Bootstrap classes. The best part in my opinion of why using bootstrap is that it styles elements in columns and therefore automatically looks good on any screensize.
 * I've used cloudinary storage, allauth and summernote for this project to be possible. 
 * Elephant SQL is used to help posting and fetching info back and forth of the database.
+* If a blogg post would be missing a picture there is a backup photo of food to be shown to make the post always appear nice and concistent.
 
 ## Features Left to Implement
 
@@ -141,7 +142,7 @@ Futher on I would like this just like with comments to end up in the admin panel
 
 2. Page works good on chrome, firefox, iphone and android.
 
-3. All links are tested in each try of diffrent browsers and all opens in a new window.
+3. All links are tested in each try of diffrent browsers and all opens in a new window for good ux.
 
 ### Validator Testing
 
