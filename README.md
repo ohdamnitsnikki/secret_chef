@@ -14,9 +14,10 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
   * [Home](#home)
   * [About](#about)
   * [Register](#register)
-
-* [Nice Extras & Other Interesting Tools](#nice-extras--other-interesting-tools)
-* [Further Reading](#further-reading)
+* [Admin panel](#admin-panel)
+* [Features](#features)
+* [Features left to implement](#features-left-to-implement)
+* [Testing](#testing)
 * [Credits](#credits)
   * [Media](#media)
   * [Acknowledgments](#acknowledgments)
@@ -114,16 +115,27 @@ alt="Tips and Tricks information cards"
 title="Tips and Tricks information cards"
 style="display: block; margin: 0 auto; max-width: 350px">
 
+## Admin
+With Djangos build in batteries included as they say in the walkthrough project I created an admin panel the same way as in the project. From here me as a admin can write, edit and delete posts and also approve, dismiss, edit and delete users comments.
+
 ## Features
 
+* A lot of the styling is styled with help of Bootstrap classes.
+* I've used cloudinary storage, allauth and summernote for this project to be posible. 
+* Elephant SQL is used to help posting and fetching info on the database.
 
 ## Features Left to Implement
 
-1. On home page I would prefer it to be moving pictures of kids, like gifs or shorter movies. Maybe an audio of some baby laughter.
+1. I would love the users to being able to interfear with the blog more than with likes and comments. Just like some options on the app only is viewable when logged in. I would like there to be one more window shown at times like this. A post window with a form for users to share their recipes with:
+ * A title.
+ * The measurements.
+ * A description.
+ * An uploaded photo.
+Futher on I would like this just like with comments to end up in the admin panel awaiting approval for being posted.
 
-2. There should be pictures or videos to all cards with shown content on how to do the specific tip. For example on tips and tricks there is one card telling you to button the body over the babies shoulder to make them stay still. It would be more informative with a video showing the tip. Or on the card that mentions white noises it could be a playlist to use.
+2. I would also like the users to being able to edit there comments.
 
-3. On the banner image for desktop, the train could be pulling the cover text on screen instead of having it pop when the train have passed.
+
 
 ## Testing
 
