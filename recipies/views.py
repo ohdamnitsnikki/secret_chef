@@ -91,24 +91,3 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
-
-def submit_recipe(request):
-    if request.method == 'POST':
-        form = RecipeForm(request.POST, request.FILES)
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            description = form.cleaned_data['description']
-            category = form.cleaned_data['category']
-            photo = form.cleaned_data['photo']
-            recipe = Recipe(
-                name=name,
-                description=description,
-                category=category,
-                photo=photo
-            )
-            recipe.save()
-            return redirect(reverse('admin:index'))
-    else:
-        form = RecipeForm()
-    return render(request, 'form.html', {'form': form})

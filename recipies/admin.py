@@ -25,15 +25,3 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
-
-
-# Display user posts
-@admin.register(Recipe)
-class RecipeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'category', 'photo')
-    list_filter = ('category',)
-    search_fields = ('title', 'description')
-    actions = ['approve_recipe']
-
-    def approve_recipe(self, request, queryset):
-        queryset.update(approved=True)
