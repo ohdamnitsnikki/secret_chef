@@ -5,15 +5,16 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
 ## CONTENTS
 
 * [How does Secret Chef work?](#what-does-the-app-do)
-
 * [Styling that are consistent on the app](#consistent-styling)
-  * [Headings](#headings)
-  * [Links](#links)
-  * [Inserting Images](#inserting-images)
-  * [Italic, Bold & Code](#italic-bold-and-code)
-  * [Strikethrough & Bullet Points](#strikethrough--bullet-points)
-  * [Code Blocks](#code-blocks)
-  * [Tables](#tables)
+  * [Navigation](#navigaion-bar)
+  * [Header](#header)
+  * [Footer](#footer )
+
+* [Element styling that aren't consistent](#the-windows)
+  * [Home](#home)
+  * [About](#about)
+  * [Register](#register)
+
 * [Nice Extras & Other Interesting Tools](#nice-extras--other-interesting-tools)
 * [Further Reading](#further-reading)
 * [Credits](#credits)
@@ -21,15 +22,14 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
   * [Acknowledgments](#acknowledgments)
 
   ## What does the app do?
-* As a user just visiting the page you are able to read other users blog posts and comments and also view the amount of likes a post have. But as a logged in user you are able to:
-   * Use a form to send your own recipes for approval to the admin.
+* As a user just visiting the page you are able to read the admins blog posts and comments and also view the amount of likes a post have. But as a logged in user you are able to:
    * Comment on the posts and by that being able to conversate with other users.
    * Like and unlike posts.
 
 ## Consistent styling 
 
 ### Navigation Bar
-* The navigation bar includes responsive links to the home, about, post and login, logout and register page. 
+* The navigation bar includes responsive links to the home, about, login, logout and register page. 
 <img
   src="assets/images/navigation-bar.png"
   alt="The Navbar" 
@@ -45,15 +45,17 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
   style="display: block; margin: 0 auto; max-width: 300px">
 
 
-### The Footer
+### Footer
 * The Footer has navigation links that opens in a new window when used. One to our Facebook page, one for Instagram and one to our youtube chanel. 
 <img
-  src="assets/images/footer.PNG"
+  src="assets/images/footer.png"
   alt="The Footer" 
   title="The Footer"
   style="display: block; margin: 0 auto; max-width: 500px">
 
 **These elements are constant on each page for easy navigation.**
+
+## The windows 
 
 ### Home Page 
 
@@ -65,7 +67,7 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
   title="Baby Care information cards"
   style="display: block; margin: 0 auto; max-width: 500px">
 
-1. By pressing the title of the post in this case "Scones you'll enter that specific post".
+1. By pressing the title of the post in this case "Scones" you'll enter that specific post.
 2. From here you can read the description of the recipe. 
 3. You can also read the comments and comment if your a user.
 <img
@@ -92,7 +94,7 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
 ### Register 
 
 * If your new to the page you will see register and login in the navbar. 
-* If your already logged-in you will se signout.
+* If your already logged-in you will see signout.
 
 <img 
 src="assets/images/sign_up.png" 
@@ -125,7 +127,7 @@ style="display: block; margin: 0 auto; max-width: 350px">
 
 ## Testing
 
-1. My page with its animations and cards appear good on desktop (1201px and up) and also on smaller screens (1200px and below). 
+1. My page with it's animations and cards appear good on desktop (1201px and up) and also on smaller screens (1200px and below). 
 
 2. Page works good on chrome, firefox, iphone and android. On explorer the pictures in the index file has another width and also the train isn't appearing.
 
