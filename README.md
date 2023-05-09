@@ -67,8 +67,8 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
 
 <img
   src="assets/images/home.png"
-  alt="Baby Care information cards" 
-  title="Baby Care information cards"
+  alt="Home page" 
+  title="Home page"
   style="display: block; margin: 0 auto; max-width: 500px">
 
 1. By pressing the title of the post in this case "Scones" you'll enter that specific post.
@@ -76,13 +76,14 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
 3. You can also read the comments and comment if your a user.
 <img
   src="assets/images/description.png"
-  alt="Baby Care information cards" 
-  title="Baby Care information cards"
+  alt="Description to recipe" 
+  title="Description to recipe"
   style="display: block; margin: 0 auto; max-width: 500px">
+
   <img
   src="assets/images/comment.png"
-  alt="Baby Care information cards" 
-  title="Baby Care information cards"
+  alt="comments" 
+  title="comments"
   style="display: block; margin: 0 auto; max-width: 500px">
 
 ### About
@@ -91,8 +92,8 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
 
 <img
   src="assets/images/about.png"
-  alt="Must haves information cards" 
-  title="Must Haves information cards"
+  alt="About page" 
+  title="About page"
   style="display: block; margin: 0 auto; max-width: 350x">
 
 ### Register 
@@ -102,29 +103,29 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
 
 <img 
 src="assets/images/sign_up.png" 
-alt="Tips and Tricks information cards" 
-title="Tips and Tricks information cards"
+alt="sign_up window" 
+title="sign_up window"
 style="display: block; margin: 0 auto; max-width: 350px">
 
 <img 
 src="assets/images/sign_in.png" 
-alt="Tips and Tricks information cards" 
-title="Tips and Tricks information cards"
+alt="sign-in window" 
+title="sign-in window"
 style="display: block; margin: 0 auto; max-width: 350px">
 
 <img 
 src="assets/images/sign_out.png" 
-alt="Tips and Tricks information cards" 
-title="Tips and Tricks information cards"
+alt="sign-out window" 
+title="sign-out window"
 style="display: block; margin: 0 auto; max-width: 350px">
 
 ## Admin
 With Djangos build in batteries included as they say in the walkthrough project I created an admin panel the same way as in the project. From here me as a admin can write, edit and delete posts and also approve, dismiss, edit and delete users comments.
 
 <img 
-src="assets/images/sign_out.png" 
-alt="Tips and Tricks information cards" 
-title="Tips and Tricks information cards"
+src="assets/images/admin.png" 
+alt="Admin panel" 
+title="Admin panel"
 style="display: block; margin: 0 auto; max-width: 350px">
 
 ## Technologies used
