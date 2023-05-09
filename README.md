@@ -23,7 +23,7 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
 * [Heroku](#creating-a-app-on-heroku)
 * [Credits](#credits)
   * [Media](#media)
-  * [Acknowledgments](#acknowledgments)
+
 
   ## What does the app do?
 * As a user just visiting the page you are able to read the admins blog posts and comments and also view the amount of likes a post have. But as a logged in user you are able to:
