@@ -20,6 +20,7 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
 * [Features left to implement](#features-left-to-implement)
 * [Testing](#testing)
 * [Bugs and issues along the way](#issues)
+* [Heroku](#creating-a-app-on-heroku)
 * [Credits](#credits)
   * [Media](#media)
   * [Acknowledgments](#acknowledgments)
@@ -144,7 +145,7 @@ style="display: block; margin: 0 auto; max-width: 350px">
 * If a blogg post would be missing a picture there is a backup photo of food to be shown to make the post always appear nice and concistent.
 * From the Django form I also used the messages that appears after the user is registrating/loggin in and loggin out. With some javascript they also go away by them self after a while. 
 
-## Features Left to Implement
+## Features left to implement
 
 1. I would love the users to being able to interfear with the blog more than with likes and comments. Just like some options on the app only is viewable when logged in. I would like there to be one more window shown at times like this. A post window with a form for users to share their recipes with:
  * A title.
@@ -174,14 +175,31 @@ The migrations went fine and the new category for user recepies ended up in the 
 
 ### Deployment 
 
-**_New Parent_** is deployed to GitHub pages, this was the steps:
+**_Secret Chef_** is deployed to GitHub pages, this was the steps:
 * Through the GitHub repository go to settings
 * Click on pages and use the branch menu to choose "main"
 * Refresh the page and a link to the final project will be deployed
 
-Live link here - [Secret Chef](https://ohdamnitsnikki.github.io/new-parent/)
+Live link here - [Secret Chef](https://ohdamnitsnikki.github.io/secret_chef/)
 
 * On the main site there is a fork button to create your own repository without affecting the orginal project or you could go into the project file and use the code button and clone the project directly.
+
+## Creating a app on Heroku
+
+(This explanation of deploying is described by AJ Greaves
+)
+This app is deployed on Heroku.
+
+When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+
+1. `heroku/python`
+2. `heroku/nodejs`
+
+You must then create a _Config Var_ called `PORT`. Set this to `8000`
+
+If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+
+Connect your GitHub repository and deploy as normal.
 
 ## Credits
 
@@ -191,8 +209,4 @@ Live link here - [Secret Chef](https://ohdamnitsnikki.github.io/new-parent/)
 4. To get inspired about box-shadows and subsribe button I've used [W3School](https://www.w3schools.com/)
 5. To understand how to style img in readme file I've used code from [SeanCDavid](https://www.seancdavis.com/posts/three-ways-to-add-image-to-github-readme/)
 
-### Media
 
-*  
-* 
-* 
