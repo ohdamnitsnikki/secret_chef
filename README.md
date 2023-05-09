@@ -2,7 +2,7 @@
 
 Secret Chef is a website for sharing recipes with other secret chefs at home. The site targets everyone who likes to impress their guests with good food and would like to improve their cooking and baking skills.
 
-## CONTENTS
+## CONTENT
 
 * [How does Secret Chef work?](#what-does-the-app-do)
 * [Styling that are consistent on the app](#consistent-styling)
@@ -167,7 +167,7 @@ Futher on I would like this just like with comments to end up in the admin panel
 
 ### Validator Testing
 
-Url for new parent is tested in both [W3C-validator](https://validator.w3.org/) and [W3C-CSS-validaor](http://jigsaw.w3.org/css-validator/validator?lang=sv&profile=css3svg&uri=https%3A%2F%2Fohdamnitsnikki.github.io%2Fnew-parent%2F&usermedium=all&vextwarning=&warning=1)
+Url for secret chef is tested in both [W3C-validator](https://validator.w3.org/) and [W3C-CSS-validaor](http://jigsaw.w3.org/css-validator/validator?lang=sv&profile=css3svg&uri=https%3A%2F%2Fohdamnitsnikki.github.io%2Fnew-parent%2F&usermedium=all&vextwarning=&warning=1)
 
 ### Bugs
 * My main idea with this project was to implement the form as I mentiones under features left to implement. Unfortunately I spend to much time on trying to make that work that I had to little time left to work on other parts. With the help of my mentor, the tutors and even reaching out to chat GTP I didn't manage to make it. I tried both with writing a bootstrap and a cripy form and connect it with the appropiate code through urls.py, forms.py, models.py and admin.py. 
