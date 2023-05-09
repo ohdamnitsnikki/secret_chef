@@ -15,9 +15,11 @@ Secret Chef is a website for sharing recipes with other secret chefs at home. Th
   * [About](#about)
   * [Register](#register)
 * [Admin panel](#admin-panel)
+* [Technologies used](#technologies-used)
 * [Features](#features)
 * [Features left to implement](#features-left-to-implement)
 * [Testing](#testing)
+* [Bugs and issues along the way](#issues)
 * [Credits](#credits)
   * [Media](#media)
   * [Acknowledgments](#acknowledgments)
@@ -118,12 +120,29 @@ style="display: block; margin: 0 auto; max-width: 350px">
 ## Admin
 With Djangos build in batteries included as they say in the walkthrough project I created an admin panel the same way as in the project. From here me as a admin can write, edit and delete posts and also approve, dismiss, edit and delete users comments.
 
+<img 
+src="assets/images/sign_out.png" 
+alt="Tips and Tricks information cards" 
+title="Tips and Tricks information cards"
+style="display: block; margin: 0 auto; max-width: 350px">
+
+## Technologies used
+
+- [Python](https://www.python.org/) is the language used to achive my goals with this app.  
+    - To get access I used [Google Auth](https://google-auth.readthedocs.io/en/master/)
+- [GitHub](https://github.com/) stored my app from the first time I pushed it.
+- [Gitpod](https://www.gitpod.io/) made it possible to write my code.
+- [Heroku](https://dashboard.heroku.com/apps) is where I depoyed my app.ct.
+- [Google Sheets](https://www.google.co.uk/sheets/about/) used to store all workout programs and process.
+- [Pep8](http://pep8online.com/) was used to test my code for any issues or errors.
+
 ## Features
 
 * A lot of the styling is styled with help of Bootstrap classes. The best part in my opinion of why using bootstrap is that it styles elements in columns and therefore automatically looks good on any screensize.
 * I've used cloudinary storage, allauth and summernote for this project to be possible. 
 * Elephant SQL is used to help posting and fetching info back and forth of the database.
 * If a blogg post would be missing a picture there is a backup photo of food to be shown to make the post always appear nice and concistent.
+* From the Django form I also used the messages that appears after the user is registrating/loggin in and loggin out. With some javascript they also go away by them self after a while. 
 
 ## Features Left to Implement
 
@@ -148,6 +167,11 @@ Futher on I would like this just like with comments to end up in the admin panel
 
 Url for new parent is tested in both [W3C-validator](https://validator.w3.org/) and [W3C-CSS-validaor](http://jigsaw.w3.org/css-validator/validator?lang=sv&profile=css3svg&uri=https%3A%2F%2Fohdamnitsnikki.github.io%2Fnew-parent%2F&usermedium=all&vextwarning=&warning=1)
 
+### Bugs
+* My main idea with this project was to implement the form as I mentiones under features left to implement. Unfortunately I spend to much time on trying to make that work that I had to little time left to work on other parts. With the help of my mentor, the tutors and even reaching out to chat GTP I didn't manage to make it. I tried both with writing a bootstrap and a cripy form and connect it with the appropiate code through urls.py, forms.py, models.py and admin.py. 
+
+The migrations went fine and the new category for user recepies ended up in the panel but for some reason I couldn't make the crispy form work in my html file.
+
 ### Deployment 
 
 **_New Parent_** is deployed to GitHub pages, this was the steps:
@@ -155,7 +179,7 @@ Url for new parent is tested in both [W3C-validator](https://validator.w3.org/) 
 * Click on pages and use the branch menu to choose "main"
 * Refresh the page and a link to the final project will be deployed
 
-Live link here - [New Parent](https://ohdamnitsnikki.github.io/new-parent/)
+Live link here - [Secret Chef](https://ohdamnitsnikki.github.io/new-parent/)
 
 * On the main site there is a fork button to create your own repository without affecting the orginal project or you could go into the project file and use the code button and clone the project directly.
 

@@ -4,8 +4,6 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
-from .forms import RecipeForm
-from .models import Recipe
 
 
 class PostList(generic.ListView):
