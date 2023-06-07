@@ -22,11 +22,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = False
+DEBUG = True
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+# X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['secret-chef1337.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['secret-chef1337.herokuapp.com', 'localhost', '8000-ohdamnitsnik-secretchef-6a4voeum3dz.ws-eu98.gitpod.io']
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
