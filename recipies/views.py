@@ -17,7 +17,7 @@ def about(request):
     return render(request, 'about.html')
 
 
-def post_form(request):
+def post(request):
     return render(request, 'form.html')
 
 
