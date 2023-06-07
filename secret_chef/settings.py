@@ -26,11 +26,7 @@ DEBUG = True
 
 # X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-<<<<<<< HEAD
 ALLOWED_HOSTS = ['secret-chef1337.herokuapp.com', 'localhost', '8000-ohdamnitsnik-secretchef-6a4voeum3dz.ws-eu98.gitpod.io']
-=======
-ALLOWED_HOSTS = ['secret-chef1337.herokuapp.com', 'localhost', '8000-ohdamnitsnik-secretchef-wghwh4u8txh.ws-eu98.gitpod.io']
->>>>>>> d06deb306bff50dc56b8256dad0f7affb94420e7
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
