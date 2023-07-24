@@ -52,7 +52,7 @@ class Comment(models.Model):
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
 
-
+"""
 # Build up for user posts
 class UserPosts(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
@@ -68,4 +68,4 @@ class UserPosts(models.Model):
     class Meta:
         ordering = ["created_on"]                         
 
-        
+"""
