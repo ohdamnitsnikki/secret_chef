@@ -3,7 +3,6 @@ from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 
-
 # Display of admin posts
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):

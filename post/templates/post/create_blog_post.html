@@ -4,9 +4,15 @@
 <!-- Blog post form -->
 
 {% block content %}
-  <h2>Create a Blog Post</h2>
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {% crispy form %}
-  </form>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6">
+      <h2 class="text-center mb-4">Create a Blog Post</h2>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% crispy form %}
+      </form>
+    </div>
+  </div>
+</div>
 {% endblock %}
