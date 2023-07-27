@@ -17,10 +17,6 @@ def about(request):
     return render(request, 'about.html')
 
 
-def post(request):
-    return render(request, 'post.html')
-
-
 def login(request):
     return render(request, 'login_signup.html')
 
