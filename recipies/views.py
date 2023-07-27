@@ -21,6 +21,7 @@ def login(request):
     return render(request, 'login_signup.html')
 
 
+# View for each specific blogpost
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):

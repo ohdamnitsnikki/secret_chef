@@ -41,6 +41,19 @@
 
             </div>
         </div>
+
+        <div>
+
+            {% for post in blog_post_list %}
+                <div class="blog-post">
+                    <h2>{{ post.title }}</h2>
+                    <p>Author: {{ post.author }}</p>
+                    <p>Type of Dish: {{ post.type_of_dish }}</p>
+                    <p>Created On: {{ post.created_on }}</p>
+                    <p>{{ post.excerpt }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
     {% if is_paginated %}
     <nav aria-label="Page navigation">

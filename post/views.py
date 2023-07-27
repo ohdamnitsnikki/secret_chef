@@ -1,5 +1,15 @@
 from django.shortcuts import render, redirect
 from .forms import BlogPostForm
+from django.views import generic, View
+from .models import BlogPost
+from recipies.models import Post
+
+
+class BlogPostList(generic.ListView):
+    model = BlogPost
+    queryset = BlogPost.objects.filter(status=1).order_by("-created_on")
+    template_name = "index.html"
+    paginate_by = 6
 
 
 def create_blog_post(request):
