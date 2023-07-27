@@ -17,5 +17,9 @@ class BlogPost(models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        verbose_name = 'User Post' 
+        verbose_name_plural = 'User Posts'
+
     def __str__(self):
         return self.title
