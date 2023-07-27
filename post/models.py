@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+# Status on the posts
+STATUS = ((0, "Draft"), (1, "Published"))
+
 
 class BlogPost(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -18,8 +21,13 @@ class BlogPost(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name = 'User Post' 
+        verbose_name = 'User Post'
         verbose_name_plural = 'User Posts'
+        ordering = ["-created_on"]
 
+    # Show number of likes
     def __str__(self):
         return self.title
+
+    def number_of_likes(self):
+        return self.likes.count()

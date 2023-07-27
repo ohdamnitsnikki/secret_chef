@@ -11,4 +11,3 @@ class BlogPostAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     readonly_fields = ('created_on',)
     summernote_fields = ('content',)
-
