@@ -28,9 +28,5 @@ class BlogPost(models.Model):
         verbose_name_plural = 'User Posts'
         ordering = ["-created_on"]
 
-    # Show number of likes
     def __str__(self):
         return self.title
-
-    def number_of_likes(self):
-        return self.likes.count()
