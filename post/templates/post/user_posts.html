@@ -1,6 +1,43 @@
 {% extends 'base.html' %} 
 {% block content %}
 
+<main class="container">
+    <h1>Approved Posts</h1>
+    {% if object_list %}
+      <ul>
+        {% for post in object_list %}
+          <li>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.excerpt }}</p>
+            <p>Posted by: {{ post.author.username }}</p>
+            <p>Post Type: {{ post.get_type_of_dish_display }}</p>
+            <img src="{{ post.image.url }}" alt="{{ post.title }}" width="200">
+            <p>{{ post.content|safe }}</p> <!-- Use safe filter to render HTML content -->
+          </li>
+        {% endfor %}
+      </ul>
+      {% if is_paginated %}
+        <div class="pagination">
+          <span class="step-links">
+            {% if page_obj.has_previous %}
+              <a href="?page=1">&laquo; first</a>
+              <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
 
+            <span class="current">
+              Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+              <a href="?page={{ page_obj.next_page_number }}">next</a>
+              <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+          </span>
+        </div>
+      {% endif %}
+    {% else %}
+      <p>No approved posts yet.</p>
+    {% endif %}
+    </main>
 
 {% endblock content %}
