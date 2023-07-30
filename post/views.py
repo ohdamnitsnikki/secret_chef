@@ -5,13 +5,15 @@ from .models import BlogPost
 from recipies.models import Post
 
 
-class BlogPostList(generic.ListView):
+# User posts view
+class UserPostListView(generic.ListView):
     model = BlogPost
     queryset = BlogPost.objects.filter(status=1).order_by("-created_on")
-    template_name = "index.html"
+    template_name = "post/user_posts.html"
     paginate_by = 6
 
 
+# User post submit
 def create_blog_post(request):
     if request.method == 'POST':
         form = BlogPostForm(request.POST, request.FILES)
@@ -26,5 +28,6 @@ def create_blog_post(request):
     return render(request, 'post/create_blog_post.html', {'form': form})
 
 
+# User posts success page
 def blog_post_success(request):
     return render(request, 'post/blog_post_success.html')
