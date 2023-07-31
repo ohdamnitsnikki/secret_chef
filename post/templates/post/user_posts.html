@@ -21,6 +21,16 @@
                     <div class="image-flash">
                       <p class="author">Author: {{ post.author }}</p>
                       <p class="author">Category: {{ post.get_type_of_dish_display }}</p>
+                      <!-- Show Edit and Delete buttons only for the author and admin -->
+                      {% if user.is_authenticated %}
+                        {% if user == post.author or user.is_staff %}
+                          <div class="edit-delete-buttons">
+                            <a href="{% url 'edit_post' post.pk %}" class="btn btn-primary">Edit</a>
+                            <a href="{% url 'delete_post' post.pk %}" class="btn btn-danger">Delete</a>
+                          </div>
+                        {% endif %}
+                      {% endif %}
+                      <!-- End of Edit and Delete buttons -->
                     </div>
                   </div>
                   <span class="post-dish">

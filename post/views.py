@@ -31,3 +31,6 @@ def create_blog_post(request):
 # User posts success page
 def blog_post_success(request):
     return render(request, 'post/blog_post_success.html')
+
+
+# Edit post
