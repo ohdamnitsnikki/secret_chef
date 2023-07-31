@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import BlogPostForm
 from django.views import generic, View
 from .models import BlogPost
@@ -33,4 +33,22 @@ def blog_post_success(request):
     return render(request, 'post/blog_post_success.html')
 
 
-# Edit post
+# Edit posts
+def edit_post_view(request, pk):
+    post = get_object_or_404(BlogPost, pk=pk)
+
+    # Check if the user is the author or an admin before allowing edits
+    if not (request.user == post.author or request.user.is_staff):
+        # Redirect to the post list if not authorized
+        return redirect('user_post')  
+
+    if request.method == 'POST':
+        form = BlogPostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            # Redirect to the user posts page after successful edit
+            return redirect('user_posts')  
+    else:
+        form = BlogPostForm(instance=post)
+
+    return render(request, 'post/edit_posts.html', {'form': form, 'post': post})
