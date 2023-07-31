@@ -26,7 +26,7 @@
                         {% if user == post.author or user.is_staff %}
                           <div class="edit-delete-buttons">
                             <a href="{% url 'edit_post' post.pk %}" class="btn btn-primary">Edit</a>
-                            <button type="button" class="btn btn-danger delete-post-btn" data-toggle="modal" data-target="#deleteModal{{ post.pk }}" data-post-id="{{ post.pk }}">
+                            <button type="button" class="btn btn-danger delete-post-btn" data-post-id="{{ post.pk }}">
                               Delete
                           </button>
                           </div>
@@ -97,9 +97,10 @@
 <script>
   // Function to handle the delete confirmation
   function confirmDelete(postId) {
-      const confirmResult = confirm("You are about to delete this post, are you sure you want to continue?");
-      if (confirmResult) {
-          // Create a form dynamically and submit it to trigger the deletion process
+      const confirmModal = document.getElementById(`deleteModal${postId}`);
+      $(confirmModal).modal('show'); // Show the modal
+      const deleteButton = confirmModal.querySelector(".delete-confirm-btn");
+      deleteButton.addEventListener("click", function() {
           const form = document.createElement("form");
           form.method = "post";
           form.action = `/delete/${postId}/`;
@@ -117,7 +118,7 @@
 
           document.body.appendChild(form);
           form.submit();
-      }
+      });
   }
 
   // Attach event listeners to the delete buttons
