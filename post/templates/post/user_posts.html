@@ -26,7 +26,9 @@
                         {% if user == post.author or user.is_staff %}
                           <div class="edit-delete-buttons">
                             <a href="{% url 'edit_post' post.pk %}" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
+                            <button type="button" class="btn btn-danger delete-post-btn" data-toggle="modal" data-target="#deleteModal{{ post.pk }}" data-post-id="{{ post.pk }}">
+                              Delete
+                          </button>
                           </div>
                         {% endif %}
                       {% endif %}
@@ -67,4 +69,67 @@
     </nav>
     {% endif %}
   </div>
+</main>
+
+<!-- Delete Confirmation Modal -->
+{% for post in object_list %}
+<div class="modal fade" id="deleteModal{{ post.pk }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{ post.pk }}" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel{{ post.pk }}">Delete Post</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                You are about to delete this post, are you sure you want to continue?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-danger delete-confirm-btn">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<script>
+  // Function to handle the delete confirmation
+  function confirmDelete(postId) {
+      const confirmResult = confirm("You are about to delete this post, are you sure you want to continue?");
+      if (confirmResult) {
+          // Create a form dynamically and submit it to trigger the deletion process
+          const form = document.createElement("form");
+          form.method = "post";
+          form.action = `/delete/${postId}/`;
+
+          const csrfTokenElement = document.querySelector('input[name="csrfmiddlewaretoken"]');
+          if (csrfTokenElement) {
+              const csrfInput = document.createElement("input");
+              csrfInput.type = "hidden";
+              csrfInput.name = "csrfmiddlewaretoken";
+              csrfInput.value = csrfTokenElement.value;
+              form.appendChild(csrfInput);
+          } else {
+              console.error("CSRF token not found in the form!");
+          }
+
+          document.body.appendChild(form);
+          form.submit();
+      }
+  }
+
+  // Attach event listeners to the delete buttons
+  document.addEventListener("DOMContentLoaded", function() {
+      const deleteButtons = document.querySelectorAll(".delete-post-btn");
+      deleteButtons.forEach((button) => {
+          const postId = button.getAttribute("data-post-id");
+          button.addEventListener("click", function() {
+              confirmDelete(postId);
+          });
+      });
+  });
+</script>
+
 {% endblock %}
