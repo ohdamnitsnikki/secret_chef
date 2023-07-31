@@ -24,12 +24,10 @@
                       <!-- Show Edit and Delete buttons only for the author and admin -->
                       {% if user.is_authenticated %}
                         {% if user == post.author or user.is_staff %}
-                          <div class="edit-delete-buttons">
-                            <a href="{% url 'edit_post' post.pk %}" class="btn btn-primary">Edit</a>
-                            <button type="button" class="btn btn-danger delete-post-btn" data-post-id="{{ post.pk }}">
-                              Delete
-                          </button>
-                          </div>
+                        <div class="edit-delete-buttons">
+                          <a href="{% url 'edit_post' post.pk %}" class="btn btn-primary">Edit</a>
+                          <button type="button" class="btn btn-danger delete-post-btn" data-toggle="modal" data-target="#deleteModal">Delete</button>
+                        </div>
                         {% endif %}
                       {% endif %}
                       <!-- End of Edit and Delete buttons -->
@@ -71,65 +69,34 @@
   </div>
 </main>
 
-<!-- Delete Confirmation Modal -->
-{% for post in object_list %}
-<div class="modal fade" id="deleteModal{{ post.pk }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{ post.pk }}" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel{{ post.pk }}">Delete Post</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                You are about to delete this post, are you sure you want to continue?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                <button type="button" class="btn btn-danger delete-confirm-btn">Yes</button>
-            </div>
-        </div>
+<!-- Modal for delete confirmation -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        You are about to delete this post, are you sure you want to continue?
+      </div>
+      <div class="modal-footer">
+        <!-- Buttons for NO and YES -->
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>
+        <button type="button" class="btn btn-danger">YES</button>
+      </div>
     </div>
+  </div>
 </div>
-{% endfor %}
 
+<!-- Custom JavaScript to open the modal -->
 <script>
-  // Function to handle the delete confirmation
-  function confirmDelete(postId) {
-      const confirmModal = document.getElementById(`deleteModal${postId}`);
-      $(confirmModal).modal('show'); // Show the modal
-      const deleteButton = confirmModal.querySelector(".delete-confirm-btn");
-      deleteButton.addEventListener("click", function() {
-          const form = document.createElement("form");
-          form.method = "post";
-          form.action = `/delete/${postId}/`;
-
-          const csrfTokenElement = document.querySelector('input[name="csrfmiddlewaretoken"]');
-          if (csrfTokenElement) {
-              const csrfInput = document.createElement("input");
-              csrfInput.type = "hidden";
-              csrfInput.name = "csrfmiddlewaretoken";
-              csrfInput.value = csrfTokenElement.value;
-              form.appendChild(csrfInput);
-          } else {
-              console.error("CSRF token not found in the form!");
-          }
-
-          document.body.appendChild(form);
-          form.submit();
-      });
-  }
-
-  // Attach event listeners to the delete buttons
-  document.addEventListener("DOMContentLoaded", function() {
-      const deleteButtons = document.querySelectorAll(".delete-post-btn");
-      deleteButtons.forEach((button) => {
-          const postId = button.getAttribute("data-post-id");
-          button.addEventListener("click", function() {
-              confirmDelete(postId);
-          });
-      });
+  $(document).ready(function () {
+    $('.delete-post-btn').on('click', function () {
+      $('#deleteModal').modal('show');
+    });
   });
 </script>
 

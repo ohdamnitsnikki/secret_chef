@@ -40,18 +40,19 @@ def edit_post_view(request, pk):
     # Check if the user is the author or an admin before allowing edits
     if not (request.user == post.author or request.user.is_staff):
         # Redirect to the post list if not authorized
-        return redirect('user_posts')  
+        return redirect('user_posts')
 
     if request.method == 'POST':
         form = BlogPostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
             # Redirect to the user posts page after successful edit
-            return redirect('user_posts')  
+            return redirect('user_posts')
     else:
         form = BlogPostForm(instance=post)
 
-    return render(request, 'post/edit_posts.html', {'form': form, 'post': post})
+    return render(
+        request, 'post/edit_posts.html', {'form': form, 'post': post})
 
 
 # Delete posts
@@ -61,11 +62,11 @@ def delete_post_view(request, pk):
     # Check if the user is the author or an admin before allowing deletion
     if not (request.user == post.author or request.user.is_staff):
         # Redirect to the post list if not authorized
-        return redirect('user_posts')  
+        return redirect('user_posts')
 
     if request.method == 'POST':
         post.delete()
         # Redirect to the user posts page after successful deletion
-        return redirect('user_posts')  
+        return redirect('user_posts')
     # Redirect to the user posts page if not a POST request
-    return redirect('user_posts') 
+    return redirect('user_posts')
