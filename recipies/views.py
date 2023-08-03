@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
+from post.models import BlogPost
 
 
 class PostList(generic.ListView):
@@ -86,3 +87,11 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+def index(request):
+    # Get all the posts with images from the database
+    posts_with_images = BlogPost.objects.exclude(
+        image='').order_by('-created_on')
+    return render(
+        request, 'index.html', {'posts_with_images': posts_with_images})
