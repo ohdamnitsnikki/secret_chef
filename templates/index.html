@@ -1,72 +1,37 @@
-{% extends "base.html" %}
+<!-- image_slideshow.html -->
 
+{% extends 'base.html' %} 
 {% block content %}
 
-<div class="container-fluid">
-    <div class="row">
-
-        <!-- The blog posts -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for post in post_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="https://www.fontana.se/wp-content/uploads/2023/01/Frukost-och-brunch-recept.jpg.webp">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div>
-                            </div>
-                            <a href="{% url 'post_detail' post.slug  %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
-                            </a>
-                            <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }}</p>
-                        </div>
-                    </div>
-                </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
+<main class="container-fluid">
+    <!-- Carousel to display all images -->
+    <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            {% for post in posts_with_images %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                {% if "placeholder" in post.image.url %}
+                <img class="d-block w-100"
+                    src="https://www.fontana.se/wp-content/uploads/2023/01/Frukost-och-brunch-recept.jpg.webp"
+                    alt="Image Placeholder">
+                {% else %}
+                <img class="d-block w-100 square-image" src="{{ post.image.url }}" alt="{{ post.title }}">
                 {% endif %}
-                {% endfor %}
-
             </div>
-        </div>
-
-        <div>
-
-            {% for post in blog_post_list %}
-                <div class="blog-post">
-                    <h2>{{ post.title }}</h2>
-                    <p>Author: {{ post.author }}</p>
-                    <p>Type of Dish: {{ post.type_of_dish }}</p>
-                    <p>Created On: {{ post.created_on }}</p>
-                    <p>{{ post.excerpt }}</p>
-                </div>
             {% endfor %}
         </div>
     </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
 
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
-</div>
-{%endblock%}
+    <!-- Rest of your existing content -->
+</main>
+
+<!-- Additional JavaScript for the carousel -->
+<script>
+    // Activate the carousel
+    $(document).ready(function () {
+        $('#imageCarousel').carousel({
+            interval: 3000 // Set the interval between slides (in milliseconds), change as desired
+        });
+    });
+</script>
+
+{% endblock %}
