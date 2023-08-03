@@ -1,27 +1,32 @@
-<!-- image_slideshow.html -->
-
 {% extends 'base.html' %} 
 {% block content %}
 
 <main class="container-fluid">
-    <!-- Carousel to display all images -->
-    <div id="imageCarousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            {% for post in posts_with_images %}
-            <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                {% if "placeholder" in post.image.url %}
-                <img class="d-block w-100"
-                    src="https://www.fontana.se/wp-content/uploads/2023/01/Frukost-och-brunch-recept.jpg.webp"
-                    alt="Image Placeholder">
-                {% else %}
-                <img class="d-block w-100 square-image" src="{{ post.image.url }}" alt="{{ post.title }}">
-                {% endif %}
+    <div class="row justify-content-center">
+        <!-- Carousel to display all images -->
+        <div id="imageCarousel" class="carousel slide col-lg-8 col-md-10 col-sm-12" data-ride="carousel">
+            <div class="carousel-inner">
+                {% for post in posts_with_images %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <div class="d-block w-100 square-image carousel-image-container">
+                        {% if "placeholder" in post.image.url %}
+                        <img class="d-block w-100"
+                            src="https://www.fontana.se/wp-content/uploads/2023/01/Frukost-och-brunch-recept.jpg.webp"
+                            alt="Image Placeholder">
+                        {% else %}
+                        <img class="d-block w-100 square-image" src="{{ post.image.url }}" alt="{{ post.title }}">
+                        {% endif %}
+                        <div class="carousel-caption">
+                            <div class="author-overlay">
+                                <p class="author">{{ post.author }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
-
-    <!-- Rest of your existing content -->
 </main>
 
 <!-- Additional JavaScript for the carousel -->
