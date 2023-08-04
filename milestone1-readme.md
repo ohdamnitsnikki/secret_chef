@@ -134,78 +134,106 @@ I plan to use vibrant and enticing food imagery throughout the site. This will i
 
 ### Accessibility
 
-Be an amazing developer and get used to thinking about accessibility in all of your projects!
+I have been mindful while coding to ensure that the website is as accessible-friendly as possible. I have achieved this by:
 
-This is the place to make a note of anything you have done with accessibility in mind. Some examples include:
+* Using semantic HTML.
+* Implementing meta tags.
+* Testing the page on various screens and browsers.
 
-Have you used icons and added aria-labels to enable screen readers to understand these?
-Have you ensured your site meets the minimum contrast requirements?
-Have you chosen fonts that are dyslexia/accessible friendly?
-
-Code Institute have an amazing channel for all things accessibility (a11y-accessibility) I would highly recommend joining this channel as it contains a wealth of information about accessibility and what we can do as developers to be more inclusive.
+- - -
 
 ## Technologies Used
 
-👩🏻‍💻 View an example of a completed Technologies Used section [here](https://github.com/kera-cudmore/Bully-Book-Club#Technologies-Used)
-
 ### Languages Used
 
-Make a note here of all the languages used in creating your project. For the first project this will most likely just be HTML & CSS.
+HTML, JavaScript, Python and CSS were used to create this website.
 
 ### Frameworks, Libraries & Programs Used
 
-Add any frameworks, libraries or programs used while creating your project.
+Git - For version control.
 
-Make sure to include things like git, GitHub, the program used to make your wireframes, any programs used to compress your images, did you use a CSS framework like Bootstrap? If so add it here (add the version used).
+Github - To save and store the files for the website.
 
-A great tip for this section is to include them as you use them, that way you won't forget what you ended up using when you get to the end of your project.
+Bootstrap - Framework and features on the app like the view and dropdown menus.
+
+Heroku - Deploy of application.
+
+Elephant SQL - For managing PostgresSQL databases.
+
+Font Awesome - For the iconography on the website.
+
+Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
+
+[Favicon.io](https://favicon.io/) To create favicon.
 
 ## Deployment & Local Development
 
-👩🏻‍💻 View an example of a completed Deployment & Local Development section [here](https://github.com/kera-cudmore/TheQuizArms#Deployment)
-
 ### Deployment
 
-Include instructions here on how to deploy your project. For your first project you will most likely be using GitHub Pages.
+#### Creating a app on Heroku
+
+(This explanation of creating a heroku app is described by AJ Greaves
+)
+
+When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+
+1. `heroku/python`
+2. `heroku/nodejs`
+
+You must then create a _Config Var_ called `PORT`. Set this to `8000`
+
+If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+
+Connect your GitHub repository and deploy as normal.
+
+#### Deploy app on Heroku
+
+Heroku was used for deployment and here are the steps for deploying.
+
+1. Sign up for a Heroku account: Go to the [Heroku website](https://www.heroku.com) and create a new account if you don't already have one.
+
+2. Install the Heroku CLI: Download and install the Heroku Command Line Interface (CLI) tool for your operating system. The CLI allows you to interact with Heroku from the command line.
+
+3. Prepare your app for deployment: Make sure your app is ready for deployment by ensuring all necessary dependencies and configuration files are in place. This includes setting up a Procfile that specifies how to run your app a requirements.txt file and also a env file.
+
+4. Initialize a Git repository: If your app is not already using Git for version control, initialize a new Git repository in the root directory of your app.
+
+5. Log in to Heroku from the CLI: Open a terminal or command prompt, and log in to Heroku by running the command heroku login. Follow the prompts to enter your Heroku account credentials.
+
+6. Push your code to Heroku: Use the command git push heroku main to deploy your code to Heroku. This will upload your app's code and dependencies to Heroku's servers.
+
+7. Set up environment variables (optional): If your app relies on environment variables for configuration, you can set them using the Heroku CLI. Run heroku config:set VARIABLE_NAME=variable_value for each environment variable you need to set.
+
+Open your app in the browser: Go to setting in Heroku and you'll find a link to your page to see your deployed app there.
 
 ### Local Development
 
-The local development section gives instructions on how someone else could make a copy of your project to play with on their local machine. This section will get more complex in the later projects, and can be a great reference to yourself if you forget how to do this.
-
 #### How to Fork
 
-Place instructions on how to fork your project here.
+To fork the Secret Chef repository:
+
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, ohdamnitsnikki/Secret Chef.
+3. Click the Fork button in the top right corner.
 
 #### How to Clone
 
-Place instructions on how to clone your project here.
+To clone the Secret Chef repository:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, ohdamnitsnikki/Secret Chef.
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
 ## Testing
 
-Start as you mean to go on - and get used to writing a TESTING.md file from the very first project!
-
-Testing requirements aren't massive for your first project, however if you start using a TESTING.md file from your first project you will thank yourself later when completing your later projects, which will contain much more information.
-  
-Use this part of the README to link to your TESTING.md file - you can view the example TESTING.md file [here](milestone1-testing.md)
+To view the full testing visit [TESTING.md](TESTING.md)
 
 ## Credits
 
-👩🏻‍💻 View an example of a completed Credits section [here](https://github.com/kera-cudmore/BookWorm#Credits)
-
-The Credits section is where you can credit all the people and sources you used throughout your project.
-
-### Code Used
-
-If you have used some code in your project that you didn't write, this is the place to make note of it. Credit the author of the code and if possible a link to where you found the code. You could also add in a brief description of what the code does, or what you are using it for here.
-
-### Content
-
-Who wrote the content for the website? Was it yourself - or have you made the site for someone and they specified what the site was to say? This is the best place to put this information.
-
-###  Media
-
-If you have used any media on your site (images, audio, video etc) you can credit them here. I like to link back to the source where I found the media, and include where on the site the image is used.
-  
-###  Acknowledgments
-
-If someone helped you out during your project, you can acknowledge them here! For example someone may have taken the time to help you on slack with a problem. Pop a little thank you here with a note of what they helped you with (I like to try and link back to their GitHub or Linked In account too). This is also a great place to thank your mentor and tutor support if you used them.
+1. The template is taken from [Code Institute](https://github.com/Code-Institute-Org/gitpod-full-template)
+2. For help during these projects I've used my mentor, the tutors and the I think therfore I blog walkthrough project.
+3. The form for registration, sign in and sign out is completely built with djangos premade forms. Also the blog posts html code is from the walkthrough project. I've just added in some colours to make it fit my page since the content already looked so good. That also goes for the comment content and comment form. 
+4. To get inspired about box-shadows and subsribe button I've used [W3School](https://www.w3schools.com/)
+5. To understand how to style img in readme file I've used code from [SeanCDavid](https://www.seancdavis.com/posts/three-ways-to-add-image-to-github-readme/)
