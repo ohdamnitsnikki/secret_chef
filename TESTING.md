@@ -92,24 +92,31 @@ Each page is achieving a score of 100 for the last three categories. The perform
 
 `First Time Visitors`
 
-| Goals | How are they achieved? |
-| :--- | :--- |
-| I want to take part in a pub quiz online and improve my general knowledge. I want to be able to play at any time, anywhere. | The Quiz Arms pulls general knowledge quiz questions from a large variety of topics, much like a pub quiz would do. The site is available for use whenever is convenient to the user. |
-| I want the site to be responsive to my device. | I have developed the site with responsiveness in mind. |
-| I want the site to be easy to navigate. | Buttons are used throughout the site for navigation, much like a mobile app. As the site is like a mobile app - I decided that I didn't want to add a navigation bar or footer, as these would make the site look more like a traditional webpage. The page title also acts as a link to the home page.  |
+| Goals | How are they achieved? | Image |
+| :--- | :--- | :--- |
+| As a first time user, I want to easily understand the page I'm on | To achieve good UX the index page renders a slideshow of all the food images from the blog posts. | ![Index page](media/shop_now_button.png) |
+| As a first time user, I want to easily navigate through out the page | To make a userfriendly page the navbar has clear links for home, blogposts and the about page. | ![Navbar](media/navbar.png) |
+| As a first time user, I want to be able to sign up to the site and create a profile | Users can create their own profile for the site by using the sign up page. Links to the sign up page are included on the navbar. | ![sign up link](media/register_link.png) |
+| As a first time user, I want to be able to read blog posts | Users can read blogposts by using the blog posts link. | ![Blog posts](media/register_link.png) |
+| As a first time user, I want to be able to read about the blog | Users can read the about section by using the about link. | ![About Section](media/register_link.png) |
+| As a first time user, I want to be able to follow the blog on social media | Users can use the links in the footer to reach the blogs social media. | ![Footer](media/register_link.png) |
+
 
 `Returning Visitors`
 
-|  Goals | How are they achieved? |
-| :--- | :--- |
-| I want to be able to choose a level of difficulty that I feel is appropriate for me, based on my experience from my first visit to the site. | Users are able to select their own level of difficulty before the game begins. Once they have played they are free to select a different level of difficulty for subsequent games. |
+| Goals | How are they achieved? | Image |
+| :--- | :--- | :--- |
+| As a returning user, I want to being able to log out from my account. | When users are logged in the links in the navbar changes from register/login to logout. | ![Logout](media/shop_now_button.png) |
+| As a returning user, I want to being able to create blogposts. | Users can use a form to create a blogpost. | ![Write a post](media/navbar.png) |
+| As a returning user, I want to be able to edit and delete my posts | Users can edit and delete there own blogposts | ![Edit and Delete](media/register_link.png) |
 
-`Frequent Visitors`
+`Admin`
 
-| Goals | How are they achieved? |
-| :--- | :--- |
-| I want to be able to adjust the difficulty level to keep improving my knowledge. | Users are able to select their own level of difficulty before the game begins. Once they have played they are free to select a different level of difficulty for subsequent games. |
-| I want to be able to log my high scores to see how I am performing. | Users of the site are able to log their high scores to the high scores page. The top ten results will be displayed. |
+| Goals | How are they achieved? | Image |
+| :--- | :--- | :--- |
+| As a admin, I want to being able to decide which posts to post. | From the admin panel the admin decides on which posts to post and not. | ![Admin posts](media/shop_now_button.png) |
+| As a admin, I want to being able to edit and deleter posts. |Admin can choose to edit and delete posts after the rendered on the blog. | ![Edit and Delete](media/navbar.png) |
+| As a admin, I want to be able to create posts | Admin can create a post the same way as an user or through the adimn panel| ![Admin post](media/register_link.png) |
 
 - - -
 
