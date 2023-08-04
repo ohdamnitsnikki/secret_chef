@@ -6,6 +6,4 @@ urlpatterns = [
     path('', views.index, name='index'),
     path("about/", views.about, name="about"),
     path("login/", views.login, name="login"),
-    path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
-    path('like/<slug:slug>/', views.PostLike.as_view(), name="post_like"),
 ]
