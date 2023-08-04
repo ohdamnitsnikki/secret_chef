@@ -3,14 +3,21 @@
 {% block content %}
 
 <!-- The about content -->
-<div class="about-content">
-    <h1 class="about-h1">About the Secret Chef!</h1>
+<main class="container-fluid">
+    <div class="row justify-content-center">
+        <!-- About section -->
+        <div class="col-lg-8 col-md-12">
+            <div class="about-content">
+                <h1 class="about-h1">About the Secret Chef!</h1>
+                <section class="about-text">
+                    <h3 class="about-h3">This website is created for all of you Secret Chefs at home!</h3>
+                    <p class="about-p">Who doesn't love seeing the surprised faces of your guests or closest family members time after time when they eat your food?</p>
+                    <p class="about-p">Secret Chef is the place for you to find new recipes!</p>
+                    <p class="about-p">As a logged-in user you can even write your own posts!</p>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
 
-    <section class="about-text">
-        <h3 class="about-h3">This website is created for all of you Secret Chefs at home!</h3>
-        <p class="about-p">Who doesn't love seeing the surprised faces of your guests or closest family members time after time when they eat your food?</p>
-        <p class="about-p">Secret Chef is the place for you to find new recipes!</p>
-        <p class="about-p">As a logged-in user you can comments on the posts and interfear with other users and also like the posts!</p>
-    </section>
-</div>
 {%endblock%}

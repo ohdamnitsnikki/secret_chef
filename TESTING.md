@@ -165,3 +165,5 @@ Additional testing was taken by friends and family on a variety of devices and s
 | Text Areas | Activates when clicked for admin and author to edit | Clicked area | Activated textfield | Pass |
 | Dropdown Menu | Shows category options| Clicked menu | Renders options | Pass |
 | Save button | Redirects user to the blog posts page page | Clicked button | Redirects to the blog posts page | Pass |
+
+Back to [README.md](README.md)
