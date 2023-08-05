@@ -78,7 +78,7 @@ The proprietor of the esteemed Secret Chef blog aspired to forge a community tha
 
 ## Design
 
-For the color palette, I used [Coolors](https://coolors.co/palette/0081a7-00afb9-fdfcdc-fed9b7-f07167).
+For the color palette, I used [Coolors](https://coolors.co/e3dfff-d3c0cd-b19994-937666-3d3a4b).
 Instead of trying to match up the colors, I went through the site and found this palette amusing.
 
 ### Imagery

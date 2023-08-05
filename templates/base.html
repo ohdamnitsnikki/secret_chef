@@ -31,58 +31,41 @@
     
   </head>
   <body>
-
-  <!-- The navbar -->  
-    <nav class="py-2 bg-body-tertiary border-bottom">
-
-      <div class="container d-flex d-wrap">
-
-        <ul class="nav me-auto">
-
+ 
+    <!-- The navbar -->
+<nav class="py-2 bg-body-tertiary border-bottom">
+  <div class="container d-flex d-wrap">
+      <ul class="nav me-auto">
           <li class="nav-item">
-            <a href="{% url 'index' %}" class="nav-link link-dark px-2 active" aria-current="page">Home</a>
+              <a href="{% url 'index' %}" class="nav-link link-dark px-2">Home</a>
           </li>
-
           <li class="nav-item">
-            <a href="{% url 'user_posts' %}" class="nav-link link-dark px-2 active" aria-current="page">Blog posts</a>
+              <a href="{% url 'user_posts' %}" class="nav-link link-dark px-2">Blog posts</a>
           </li>
-
           <li class="nav-item">
-            <a href="{% url 'about' %}" class="nav-link link-dark px-2 active" aria-current="page">About</a>
+              <a href="{% url 'about' %}" class="nav-link link-dark px-2">About</a>
           </li>
-
-        </ul>
-
-        <ul class="nav">
-
+      </ul>
+      <ul class="nav">
           {% if user.is_authenticated %}
-
           <li class="nav-item">
-            <a href="{% url 'account_logout' %}" class="nav-link link-dark px-2 active" aria-current="page">Logout</a>
+              <a href="{% url 'account_logout' %}" class="nav-link link-dark px-2">Logout</a>
           </li>
           <li class="nav-item">
-            <a href="{% url 'create_blog_post' %}" class="nav-link link-dark px-2 active" aria-current="page">Write a Post!</a>
+              <a href="{% url 'create_blog_post' %}" class="nav-link link-dark px-2">Write a Post!</a>
           </li>
-
           {% else %}
-
           <li class="nav-item">
-            <a href="{% url 'account_signup' %}" class="nav-link link-dark px-2 active" aria-current="page">Register</a>
+              <a href="{% url 'account_signup' %}" class="nav-link link-dark px-2">Register</a>
           </li>
-
           <li class="nav-item">
-            <a href="{% url 'account_login' %}" class="nav-link link-dark px-2 active" aria-current="page">Login</a>
+              <a href="{% url 'account_login' %}" class="nav-link link-dark px-2">Login</a>
           </li>
-
           {% endif %}
+      </ul>
+  </div>
+</nav>
 
-          
-
-        </ul>
-
-      </div>
-
-    </nav>
 
   <!-- The header -->
     <header>

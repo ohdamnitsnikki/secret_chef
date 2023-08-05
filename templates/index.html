@@ -4,11 +4,11 @@
 <main class="container-fluid">
     <div class="row justify-content-center">
         <!-- Left side: Welcome to the Secret Chef -->
-        <div class="col-lg-2 col-md-3 col-sm-12 bg-primary text-white shadow-box">
+        <div class="col-sm-12 shadow-box">
             <h1>Welcome to the Secret Chef</h1>
         </div>
         <!-- Carousel to display all images -->
-        <div id="imageCarousel" class="carousel slide col-lg-8 col-md-10 col-sm-12" data-ride="carousel">
+        <div id="imageCarousel" class="carousel slide col-sm-12" data-ride="carousel">
             <div class="carousel-inner">
                 {% for post in posts_with_images %}
                 <div class="carousel-item {% if forloop.first %}active{% endif %}">
@@ -31,11 +31,12 @@
             </div>
         </div>
         <!-- Right side: Description -->
-        <div class="col-lg-2 col-md-3 col-sm-12 bg-secondary text-white shadow-box">
-            <p>Description of the page goes here.</p>
+        <div class="col-sm-12  shadow-box">
+            <p>I see you found your way to our secret community. We live by the philosophy that cooking is an art form that we share with each other. Singup to share your recepies or just visit Blog post to get inspired!</p>
         </div>
     </div>
 </main>
+
 
 
 <!-- Additional JavaScript for the carousel -->
