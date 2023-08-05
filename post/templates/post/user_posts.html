@@ -59,10 +59,10 @@
                       <!-- End of Edit and Delete buttons -->
                     </div>
                   </div>
-                  <span class="post-dish">
+                  <div class="post-dish">
                     <h2 class="card-title">{{ post.title }}</h2>
-                    <strong><p class="card-text">{{ post.excerpt }}</p></strong>
-                  </span>
+                    <p class="card-text">{{ post.excerpt }}</p>
+                  </div>
                   <!-- Display the content here -->
                   <div class="card-text">
                     <!-- Use safe filter to render HTML content -->
@@ -92,7 +92,6 @@
       </ul>
     </nav>
     {% endif %}
-  </div>
 </main>
 
 <!-- Custom JavaScript to open the modal -->

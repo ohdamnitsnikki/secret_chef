@@ -29,13 +29,13 @@ Furthermore, I thoroughly checked each page using both Google Chrome developer t
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
-* [base.html](testing/w3/w3-index.png) - Passed.
-* [about.html](testing/w3/w3-game.png) - No errors, 1 Warning. The warning is for an empty H2 tag. This is where the question is inserted using jQuery.
-* [index.html](testing/w3/w3-highscores.png) - Passed.
-* [blog_post_success.html](testing/w3/w3-404.png) - Passed.
-* [create_blog_post.html](testing/w3/w3-500.png) - Passed.
-* [edit_posts.html](testing/w3/w3-500.png) - Passed.
-* [user_posts.html](testing/w3/w3-500.png) - Passed.
+* [base.html](testing/w3/w3-index.png) - Five errors regarding the fact that the validator doesn't understand the way you style django apps.
+* [about.html](testing/w3/w3-game.png) - Two errors and one warning, all of them considered the fact that the validator doesn't undertsand the extend base template.
+* [index.html](testing/w3/w3-highscores.png) - Three errors and one warning regarding the fact that the validator doesn't understand the way you style django apps.
+* [blog_post_success.html](testing/w3/w3-404.png) - Three errors and one warning regarding the fact that the validator doesn't understand the way you style django apps.
+* [create_blog_post.html](testing/w3/w3-500.png) - Two errors and one warning, all of them considered the fact that the validator doesn't undertsand the extend base template.
+* [edit_posts.html](testing/w3/w3-500.png) - Two errors and one warning, all of them considered the fact that the validator doesn't undertsand the extend base template.
+* [user_posts.html](testing/w3/w3-500.png) - Thirteen errors and one warning regarding the fact that the validator doesn't understand the way you style django apps.
 
 * [style.css](testing/w3/w3-css.png) - Passed, no errors found.
 
