@@ -4,7 +4,7 @@ The Secret Chef is a blog for people to gather around and share their best recip
 
 To keep the imaginary flavors on the page, all photos from the blog posts render in a slideshow on the front page.
 
-![Seret Chef home page](media/facebookpage.png)
+![Seret Chef home page](assets/images/homepage.png)
 
 [View Secret Chef on Heroku Pages](https://git.heroku.com/secret-chef1337.git)
 
@@ -102,7 +102,7 @@ I plan to use vibrant and enticing food imagery throughout the site. This will i
 #### Navigation Bar
 * The navigation bar includes responsive links to the home, blog posts, about, login/register/logout and write a posts page.
 <img
-  src="assets/images/navigation-bar.png"
+  src="assets/images/navbar.png"
   alt="The Navbar" 
   title="The Navbar"
   style="display: block; margin: 0 auto; max-width: 500px">

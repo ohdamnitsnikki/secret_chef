@@ -29,15 +29,24 @@ Furthermore, I thoroughly checked each page using both Google Chrome developer t
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
-* [base.html](testing/w3/w3-index.png) - Five errors regarding the fact that the validator doesn't understand the way you style django apps.
-* [about.html](testing/w3/w3-game.png) - Two errors and one warning, all of them considered the fact that the validator doesn't undertsand the extend base template.
-* [index.html](testing/w3/w3-highscores.png) - Three errors and one warning regarding the fact that the validator doesn't understand the way you style django apps.
-* [blog_post_success.html](testing/w3/w3-404.png) - Three errors and one warning regarding the fact that the validator doesn't understand the way you style django apps.
-* [create_blog_post.html](testing/w3/w3-500.png) - Two errors and one warning, all of them considered the fact that the validator doesn't undertsand the extend base template.
-* [edit_posts.html](testing/w3/w3-500.png) - Two errors and one warning, all of them considered the fact that the validator doesn't undertsand the extend base template.
-* [user_posts.html](testing/w3/w3-500.png) - Thirteen errors and one warning regarding the fact that the validator doesn't understand the way you style django apps.
+* [base.html](assets/images/base.testing.png) - Five errors related to the fact that the validator doesn't understand the way you style Django apps.
+* [about.html](assets/images/about.testing.png) - Two errors and one warning, all of them related to the fact that the validator doesn't understand the extended base template.
+* [index.html](assets/images/index.testing.png) - Three errors and one warning related to the fact that the validator doesn't understand the way you style Django apps.
+* [blog_post_success.html](assets/images/blog_post_success.testing.png) - Three errors and one warning related to the fact that the validator doesn't understand the way you style Django apps.
+* [create_blog_post.html](assets/images/write_a_post.testing.png) - Two errors and one warning, all of them related to the fact that the validator doesn't understand the extended base template.
+* [edit_posts.html](assets/images/edit_posts.testing.png) - Two errors and one warning, all of them related to the fact that the validator doesn't understand the extended base template.
+* [user_posts.html](assets/images/user_posts.testing.png) - Thirteen errors and one warning related to the fact that the validator doesn't understand the way you style Django apps.
 
-* [style.css](testing/w3/w3-css.png) - Passed, no errors found.
+All errors and warnings found had to do with either the fact that all scripts, meta tags and so on wasn't in the template or the way I rendered the backend functions to the frontend. There where no errors realted to the HTML code or the semantic of it.
+
+* [style.css](assets/images/css.testing.png) - Passed, no errors found.
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
 
 - - -
 
@@ -45,9 +54,9 @@ Furthermore, I thoroughly checked each page using both Google Chrome developer t
 
 [jshint](https://jshint.com/) was used to validate the JavaScript.
 
-* [base.html](testing/jshint/jshint-javascript.png) - Passed with two warnings. 
-* [index.html](testing/jshint/jshint-game.png) - Passed.
-* [user_posts.html](testing/jshint/jshint-highscores.png) - Passed.
+* [base.html](assets/images/base.js.png) - Passed with two warnings. 
+* [index.html](assets/images/index.js.png) - Passed.
+* [user_posts.html](assets/images/user_posts.js.png) - Passed.
 
 - - -
 
@@ -59,29 +68,29 @@ Furthermore, I thoroughly checked each page using both Google Chrome developer t
 
 | Goals | How are they achieved? | Image |
 | :--- | :--- | :--- |
-| As a first time user, I want to easily understand the page I'm on | To achieve good UX the index page renders a slideshow of all the food images from the blog posts. | ![Index page](media/shop_now_button.png) |
-| As a first time user, I want to easily navigate through out the page | To make a userfriendly page the navbar has clear links for home, blogposts and the about page. | ![Navbar](media/navbar.png) |
-| As a first time user, I want to be able to sign up to the site and create a profile | Users can create their own profile for the site by using the sign up page. Links to the sign up page are included on the navbar. | ![sign up link](media/register_link.png) |
-| As a first time user, I want to be able to read blog posts | Users can read blogposts by using the blog posts link. | ![Blog posts](media/register_link.png) |
-| As a first time user, I want to be able to read about the blog | Users can read the about section by using the about link. | ![About Section](media/register_link.png) |
-| As a first time user, I want to be able to follow the blog on social media | Users can use the links in the footer to reach the blogs social media. | ![Footer](media/register_link.png) |
+| As a first time user, I want to easily understand the page I'm on | To achieve good UX the index page renders a slideshow of all the food images from the blog posts. | ![Index page](assets/images/index.template.png) |
+| As a first time user, I want to easily navigate through out the page | To make a userfriendly page the navbar has clear links for home, blogposts and the about page. | ![Navbar](assets/images/navbar.template.png) |
+| As a first time user, I want to be able to sign up to the site and create a profile | Users can create their own profile for the site by using the sign up page. Links to the sign up page are included on the navbar. | ![sign up link](assets/images/register.template.png) |
+| As a first time user, I want to be able to read blog posts | Users can read blogposts by using the blog posts link. | ![Blog posts](assets/images/posts.template.png) |
+| As a first time user, I want to be able to read about the blog | Users can read the about section by using the about link. | ![About Section](assets/images/about.template.png) |
+| As a first time user, I want to be able to follow the blog on social media | Users can use the links in the footer to reach the blogs social media. | ![Footer](assets/images/footer.template.png) |
 
 
 `Returning Visitors`
 
 | Goals | How are they achieved? | Image |
 | :--- | :--- | :--- |
-| As a returning user, I want to being able to log out from my account. | When users are logged in the links in the navbar changes from register/login to logout. | ![Logout](media/shop_now_button.png) |
-| As a returning user, I want to being able to create blogposts. | Users can use a form to create a blogpost. | ![Write a post](media/navbar.png) |
-| As a returning user, I want to be able to edit and delete my posts | Users can edit and delete there own blogposts | ![Edit and Delete](media/register_link.png) |
+| As a returning user, I want to being able to log out from my account. | When users are logged in the links in the navbar changes from register/login to logout. | ![Logout](assets/images/logout.ux.png) |
+| As a returning user, I want to being able to create blogposts. | Users can use a form to create a blogpost. | ![Write a post](assets/images/write_a_post.ux.png) |
+| As a returning user, I want to be able to edit and delete my posts | Users can edit and delete there own blogposts | ![Edit and Delete](assets/images/edit.ux.png) |
 
 `Admin`
 
 | Goals | How are they achieved? | Image |
 | :--- | :--- | :--- |
-| As a admin, I want to being able to decide which posts to post. | From the admin panel the admin decides on which posts to post and not. | ![Admin posts](media/shop_now_button.png) |
-| As a admin, I want to being able to edit and deleter posts. |Admin can choose to edit and delete posts after the rendered on the blog. | ![Edit and Delete](media/navbar.png) |
-| As a admin, I want to be able to create posts | Admin can create a post the same way as an user or through the adimn panel| ![Admin post](media/register_link.png) |
+| As a admin, I want to being able to decide which posts to post. | From the admin panel the admin decides on which posts to post and not. | ![Admin posts](assets/images/draft.ux.png) |
+| As a admin, I want to being able to edit and deleter posts. |Admin can choose to edit and delete posts after the rendered on the blog. | ![Edit and Delete](assets/images/edit.ux.png) |
+| As a admin, I want to be able to create posts | Admin can create a post the same way as an user or through the adimn panel| ![Admin post](assets/images/write_post.ux.png) |
 
 - - -
 
