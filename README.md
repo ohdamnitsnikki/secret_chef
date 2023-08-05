@@ -131,6 +131,9 @@ I plan to use vibrant and enticing food imagery throughout the site. This will i
 * For the future I would like to update the blog post form to make it render the post diffrently. I would like the content area to render into two part. One where each ingredience with the measurments renders into dots. Then I would like the step by step to appear the same way. Instead of just being one longer text.
 * I would also implement a like function that makes blog post appear higher on the site.
 * Users should also be able to comment and keep a conversation on each post.
+* The images users adds to their posts renders in the slidshow before admin approved the post which I would like to remove.
+* I would also like to have all posts in the same size and instead have a show more or show less button.
+* When editing a post you can use a link to see the photo that has been used, I would like that photo to open in a new window or render as a preview.
 
 ### Accessibility
 

@@ -3,13 +3,14 @@
 {% block content %}
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <div class="alert alert-success">
-        <h4>Success!</h4>
-        <p>Your blog post has been created successfully.</p>
-        <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+      <div class="col-md-8 offset-md-2">
+          <div class="alert alert-success custom-alert">
+              <h4>Success!</h4>
+              <p>Your blog post has been created successfully.</p>
+              <a href="{% url 'index' %}" class="btn btn-primary custom-button">Back to Home</a>
+          </div>
       </div>
-    </div>
   </div>
 </div>
+
 {% endblock %}

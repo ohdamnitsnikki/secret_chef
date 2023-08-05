@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import BlogPostForm
 from django.views import generic, View
 from .models import BlogPost
+from django.contrib.auth.models import User
 
 
 # User posts view

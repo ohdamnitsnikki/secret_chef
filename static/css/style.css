@@ -236,6 +236,7 @@ button, input, optgroup, select, textarea {
     border: 2px solid #3D3A4B;
     padding: 18px;
     background-color: #D3C0CD;
+    width: fit-content;
 }
 
 
@@ -284,8 +285,8 @@ button, input, optgroup, select, textarea {
 }
 
 .main-bg {
-    background-color: #E3DFFF;
-    min-height: 75vh;
+    background: linear-gradient(to bottom right, #FFFFFF, rgb(227, 223, 255));
+    min-height: 76vh;
     border-top: 2px solid #3D3A4B;
 }
 
@@ -388,21 +389,33 @@ button, input, optgroup, select, textarea {
     text-decoration: underline;
 }
 
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
+.custom-form form p {
+    max-width: 100%; 
 }
 
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
+/* Custom styling for the success/logout alert box */
+.custom-alert {
+    background-color: #D3C0CD;
+    border: 2px solid #3D3A4B;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom styling for the button */
+.custom-button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+/* Add margin to the button */
+.custom-button {
+    margin-top: 10px;
 }
 
 /* About page*/
-/* Custom styling for the about section */
+
 .about-content {
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
